@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 150" width="1280" height="150" role="img" aria-label="Contact: saivanka1999@gmail.com, Dallas TX, open to annotation and LLM evaluation work">
+  <style>
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    .sans{font-family:'Segoe UI',-apple-system,Helvetica,Arial,sans-serif}
+    .drive{animation:drive 11s linear infinite}
+    @keyframes drive{from{transform:translateX(-160px)}to{transform:translateX(1340px)}}
+  </style>
+  <rect width="1280" height="150" rx="14" fill="#0f1218"/>
+  <text x="640" y="48" class="sans" font-size="22" font-weight="700" fill="#e8ebf1" text-anchor="middle">Have a labeling project? Let's start with a pilot batch.</text>
+  <text x="640" y="76" class="mono" font-size="15" fill="#a3abbd" text-anchor="middle">saivanka1999@gmail.com  ·  Dallas, TX  ·  Central Time</text>
+  <rect x="0" y="100" width="1280" height="50" fill="#161a22"/>
+  <g fill="#2e3545"><rect x="20" y="126" width="50" height="4"/><rect x="160" y="126" width="50" height="4"/><rect x="300" y="126" width="50" height="4"/><rect x="440" y="126" width="50" height="4"/><rect x="580" y="126" width="50" height="4"/><rect x="720" y="126" width="50" height="4"/><rect x="860" y="126" width="50" height="4"/><rect x="1000" y="126" width="50" height="4"/><rect x="1140" y="126" width="50" height="4"/></g>
+  <g class="drive">
+    <rect x="12" y="122" width="78" height="16" rx="5" fill="#e2bd3f"/><polygon points="26,122 38,111 66,111 78,122" fill="#e2bd3f"/>
+    <circle cx="30" cy="139" r="7" fill="#07090c"/><circle cx="72" cy="139" r="7" fill="#07090c"/>
+    <rect x="8" y="107" width="86" height="40" fill="#ff2e7a" fill-opacity=".1" stroke="#ff2e7a" stroke-width="2"/>
+  </g>
+</svg>

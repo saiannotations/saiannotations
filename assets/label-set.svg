@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 472" width="1000" height="472" role="img" aria-label="Label set of skills: bounding boxes, video tracking, polygon segmentation, keypoints, named entities, text classification, LLM evaluation">
+  <style>
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    .sans{font-family:'Segoe UI',-apple-system,Helvetica,Arial,sans-serif}
+    .sel{animation:sel 14s steps(7) infinite}
+    @keyframes sel{from{transform:translateY(0)}to{transform:translateY(392px)}}
+  </style>
+  <rect width="1000" height="472" rx="14" fill="#0f1218"/>
+  <rect x="1" y="1" width="998" height="470" rx="13" fill="none" stroke="#272d3a"/>
+  <text x="28" y="36" class="mono" font-size="13" fill="#6f7a8f">label_set / sai_pavan_vanka.yaml</text>
+  <text x="972" y="36" class="mono" font-size="13" fill="#6f7a8f" text-anchor="end">7 classes · hotkeys 1–7</text>
+  <line x1="0" y1="52" x2="1000" y2="52" stroke="#272d3a"/>
+
+  <!-- moving selection, like cycling hotkeys -->
+  <g class="sel"><rect x="12" y="62" width="976" height="50" rx="8" fill="#ff5c93" fill-opacity=".09" stroke="#ff5c93" stroke-opacity=".5"/></g>
+
+  <g class="sans">
+    <!-- row template: y base = 62 + i*56 -->
+    <g transform="translate(0,62)">
+      <rect x="30" y="16" width="18" height="18" fill="none" stroke="#ff2e7a" stroke-width="3"/>
+      <rect x="64" y="13" width="28" height="24" rx="4" fill="#161a22" stroke="#343b4b"/><text x="78" y="30" class="mono" font-size="13" fill="#a3abbd" text-anchor="middle">1</text>
+      <text x="112" y="23" font-size="18" font-weight="700" fill="#e8ebf1">bbox_detection</text>
+      <text x="112" y="42" font-size="13" fill="#8b94a7">Tight 2D boxes with occlusion and truncation attributes</text>
+      <text x="968" y="31" class="mono" font-size="13" fill="#a3abbd" text-anchor="end">COCO · YOLO · VOC</text>
+    </g>
+    <g transform="translate(0,118)">
+      <rect x="30" y="16" width="18" height="18" fill="none" stroke="#2f7bff" stroke-width="3"/>
+      <rect x="64" y="13" width="28" height="24" rx="4" fill="#161a22" stroke="#343b4b"/><text x="78" y="30" class="mono" font-size="13" fill="#a3abbd" text-anchor="middle">2</text>
+      <text x="112" y="23" font-size="18" font-weight="700" fill="#e8ebf1">video_tracking</text>
+      <text x="112" y="42" font-size="13" fill="#8b94a7">Persistent track IDs across every frame, through occlusion</text>
+      <text x="968" y="31" class="mono" font-size="13" fill="#a3abbd" text-anchor="end">MOT · CVAT XML</text>
+    </g>
+    <g transform="translate(0,174)">
+      <rect x="30" y="16" width="18" height="18" fill="none" stroke="#00c2a8" stroke-width="3"/>
+      <rect x="64" y="13" width="28" height="24" rx="4" fill="#161a22" stroke="#343b4b"/><text x="78" y="30" class="mono" font-size="13" fill="#a3abbd" text-anchor="middle">3</text>
+      <text x="112" y="23" font-size="18" font-weight="700" fill="#e8ebf1">polygon_segmentation</text>
+      <text x="112" y="42" font-size="13" fill="#8b94a7">Semantic and instance masks that follow true edges</text>
+      <text x="968" y="31" class="mono" font-size="13" fill="#a3abbd" text-anchor="end">COCO polygons · RLE</text>
+    </g>
+    <g transform="translate(0,230)">
+      <rect x="30" y="16" width="18" height="18" fill="none" stroke="#f0a400" stroke-width="3"/>
+      <rect x="64" y="13" width="28" height="24" rx="4" fill="#161a22" stroke="#343b4b"/><text x="78" y="30" class="mono" font-size="13" fill="#a3abbd" text-anchor="middle">4</text>
+      <text x="112" y="23" font-size="18" font-weight="700" fill="#e8ebf1">keypoints_pose</text>
+      <text x="112" y="42" font-size="13" fill="#8b94a7">COCO-17 body keypoints with visibility flags, frame by frame</text>
+      <text x="968" y="31" class="mono" font-size="13" fill="#a3abbd" text-anchor="end">COCO keypoints</text>
+    </g>
+    <g transform="translate(0,286)">
+      <rect x="30" y="16" width="18" height="18" fill="none" stroke="#9b55ff" stroke-width="3"/>
+      <rect x="64" y="13" width="28" height="24" rx="4" fill="#161a22" stroke="#343b4b"/><text x="78" y="30" class="mono" font-size="13" fill="#a3abbd" text-anchor="middle">5</text>
+      <text x="112" y="23" font-size="18" font-weight="700" fill="#e8ebf1">named_entities</text>
+      <text x="112" y="42" font-size="13" fill="#8b94a7">Character-accurate PERSON, ORG, LOC, DATE, MONEY spans</text>
+      <text x="968" y="31" class="mono" font-size="13" fill="#a3abbd" text-anchor="end">JSONL · spaCy · CoNLL</text>
+    </g>
+    <g transform="translate(0,342)">
+      <rect x="30" y="16" width="18" height="18" fill="none" stroke="#3ddc84" stroke-width="3"/>
+      <rect x="64" y="13" width="28" height="24" rx="4" fill="#161a22" stroke="#343b4b"/><text x="78" y="30" class="mono" font-size="13" fill="#a3abbd" text-anchor="middle">6</text>
+      <text x="112" y="23" font-size="18" font-weight="700" fill="#e8ebf1">text_classification</text>
+      <text x="112" y="42" font-size="13" fill="#8b94a7">Intent and sentiment, including sarcasm and mixed intent</text>
+      <text x="968" y="31" class="mono" font-size="13" fill="#a3abbd" text-anchor="end">CSV · JSONL</text>
+    </g>
+    <g transform="translate(0,398)">
+      <rect x="30" y="16" width="18" height="18" fill="none" stroke="#ff7a45" stroke-width="3"/>
+      <rect x="64" y="13" width="28" height="24" rx="4" fill="#161a22" stroke="#343b4b"/><text x="78" y="30" class="mono" font-size="13" fill="#a3abbd" text-anchor="middle">7</text>
+      <text x="112" y="23" font-size="18" font-weight="700" fill="#e8ebf1">llm_evaluation</text>
+      <text x="112" y="42" font-size="13" fill="#8b94a7">Pairwise preference, rubric scores and written rationales</text>
+      <text x="968" y="31" class="mono" font-size="13" fill="#a3abbd" text-anchor="end">JSONL preference pairs</text>
+    </g>
+  </g>
+</svg>

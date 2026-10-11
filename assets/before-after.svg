@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-label="Before and after comparisons: loose to tight boxes IoU 0.56 to 0.97, ID switches 2 to 0, shadow removed from building mask">
+  <style>
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    .sans{font-family:'Segoe UI',-apple-system,Helvetica,Arial,sans-serif}
+    .b{animation:sb 8s infinite}.a{animation:sa 8s infinite}
+    @keyframes sb{0%,42%{opacity:1}50%,92%{opacity:0}100%{opacity:1}}
+    @keyframes sa{0%,42%{opacity:0}50%,92%{opacity:1}100%{opacity:0}}
+  </style>
+  <rect width="1200" height="380" rx="14" fill="#0f1218"/>
+  <rect x="1" y="1" width="1198" height="378" rx="13" fill="none" stroke="#272d3a"/>
+  <text x="28" y="36" class="mono" font-size="13" fill="#6f7a8f">qa_review / before → after</text>
+  <g class="mono" font-size="13" text-anchor="end">
+    <text x="1172" y="36" class="b" fill="#ff6b6b">● BEFORE</text>
+    <text x="1172" y="36" class="a" fill="#3ddc84">● AFTER</text>
+  </g>
+
+  <!-- tile 1: IoU -->
+  <g transform="translate(20,56)">
+    <rect width="372" height="304" rx="10" fill="#161a22" stroke="#272d3a"/>
+    <text x="18" y="30" class="sans" font-size="17" font-weight="700" fill="#e8ebf1">Loose boxes → tight boxes</text>
+    <g transform="translate(26,46) scale(1)">
+      <rect width="320" height="150" fill="#9fb6c9"/><rect y="150" width="320" height="50" fill="#3c414a"/>
+      <rect x="64" y="110" width="192" height="42" rx="9" fill="#b8433a"/><polygon points="100,110 128,66 210,66 236,110" fill="#b8433a"/>
+      <polygon points="110,108 132,72 166,72 166,108" fill="#cfe3ee"/><polygon points="172,72 206,72 226,108 172,108" fill="#cfe3ee"/>
+      <circle cx="108" cy="152" r="18" fill="#111"/><circle cx="212" cy="152" r="18" fill="#111"/>
+      <rect x="62" y="64" width="196" height="106" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <rect class="b" x="38" y="40" width="252" height="148" fill="#ff6b6b" fill-opacity=".12" stroke="#ff6b6b" stroke-width="2.5"/>
+      <rect class="a" x="64" y="65" width="193" height="104" fill="#3ddc84" fill-opacity=".12" stroke="#3ddc84" stroke-width="2.5"/>
+    </g>
+    <text x="18" y="276" class="mono" font-size="14" fill="#8b94a7">IoU vs reference</text>
+    <text x="354" y="276" class="mono b" font-size="20" fill="#ff6b6b" text-anchor="end">0.56</text>
+    <text x="354" y="276" class="mono a" font-size="20" fill="#3ddc84" text-anchor="end">0.97</text>
+  </g>
+
+  <!-- tile 2: ID switches -->
+  <g transform="translate(414,56)">
+    <rect width="372" height="304" rx="10" fill="#161a22" stroke="#272d3a"/>
+    <text x="18" y="30" class="sans" font-size="17" font-weight="700" fill="#e8ebf1">ID swaps → stable tracks</text>
+    <g class="mono" font-size="11" fill="#6f7a8f" text-anchor="middle">
+      <text x="122" y="70">f1</text><text x="152" y="70">f2</text><text x="182" y="70">f3</text><text x="212" y="70">f4</text><text x="242" y="70">f5</text><text x="272" y="70">f6</text><text x="302" y="70">f7</text><text x="332" y="70">f8</text>
+    </g>
+    <text x="18" y="102" class="mono" font-size="12" fill="#a3abbd">green</text>
+    <text x="18" y="146" class="mono" font-size="12" fill="#a3abbd">blue</text>
+    <!-- after: stable -->
+    <g class="a mono" font-size="11" fill="#0f1218" text-anchor="middle">
+      <g fill="#00c2a8"><rect x="108" y="82" width="28" height="30"/><rect x="138" y="82" width="28" height="30"/><rect x="168" y="82" width="28" height="30"/><rect x="198" y="82" width="28" height="30"/><rect x="228" y="82" width="28" height="30"/><rect x="258" y="82" width="28" height="30"/><rect x="288" y="82" width="28" height="30"/><rect x="318" y="82" width="28" height="30"/></g>
+      <g fill="#2f7bff"><rect x="108" y="126" width="28" height="30"/><rect x="138" y="126" width="28" height="30"/><rect x="168" y="126" width="28" height="30"/><rect x="198" y="126" width="28" height="30"/><rect x="228" y="126" width="28" height="30"/><rect x="258" y="126" width="28" height="30"/><rect x="288" y="126" width="28" height="30"/><rect x="318" y="126" width="28" height="30"/></g>
+      <text x="122" y="101">#4</text><text x="152" y="101">#4</text><text x="182" y="101">#4</text><text x="212" y="101">#4</text><text x="242" y="101">#4</text><text x="272" y="101">#4</text><text x="302" y="101">#4</text><text x="332" y="101">#4</text>
+      <g fill="#fff"><text x="122" y="145">#5</text><text x="152" y="145">#5</text><text x="182" y="145">#5</text><text x="212" y="145">#5</text><text x="242" y="145">#5</text><text x="272" y="145">#5</text><text x="302" y="145">#5</text><text x="332" y="145">#5</text></g>
+    </g>
+    <!-- before: swapped after f4 -->
+    <g class="b mono" font-size="11" text-anchor="middle">
+      <g fill="#00c2a8"><rect x="108" y="82" width="28" height="30"/><rect x="138" y="82" width="28" height="30"/><rect x="168" y="82" width="28" height="30"/><rect x="198" y="82" width="28" height="30"/><rect x="108" y="126" width="28" height="30" fill="#2f7bff"/><rect x="138" y="126" width="28" height="30" fill="#2f7bff"/><rect x="168" y="126" width="28" height="30" fill="#2f7bff"/><rect x="198" y="126" width="28" height="30" fill="#2f7bff"/></g>
+      <g fill="#2f7bff"><rect x="228" y="82" width="28" height="30"/><rect x="258" y="82" width="28" height="30"/><rect x="288" y="82" width="28" height="30"/><rect x="318" y="82" width="28" height="30"/></g>
+      <g fill="#00c2a8"><rect x="228" y="126" width="28" height="30"/><rect x="258" y="126" width="28" height="30"/><rect x="288" y="126" width="28" height="30"/><rect x="318" y="126" width="28" height="30"/></g>
+      <rect x="228" y="82" width="28" height="30" fill="none" stroke="#ff6b6b" stroke-width="3"/><rect x="228" y="126" width="28" height="30" fill="none" stroke="#ff6b6b" stroke-width="3"/>
+      <g fill="#0f1218"><text x="122" y="101">#4</text><text x="152" y="101">#4</text><text x="182" y="101">#4</text><text x="212" y="101">#4</text><text x="242" y="145">#4</text><text x="272" y="145">#4</text><text x="302" y="145">#4</text><text x="332" y="145">#4</text></g>
+      <g fill="#fff"><text x="242" y="101">#5</text><text x="272" y="101">#5</text><text x="302" y="101">#5</text><text x="332" y="101">#5</text><text x="122" y="145">#5</text><text x="152" y="145">#5</text><text x="182" y="145">#5</text><text x="212" y="145">#5</text></g>
+    </g>
+    <text x="186" y="196" class="mono" font-size="12" fill="#6f7a8f" text-anchor="middle">two people cross paths between f4 and f5</text>
+    <text x="186" y="220" class="mono b" font-size="12" fill="#ff6b6b" text-anchor="middle">IDs jump to the wrong person</text>
+    <text x="186" y="220" class="mono a" font-size="12" fill="#3ddc84" text-anchor="middle">each person keeps one ID</text>
+    <text x="18" y="276" class="mono" font-size="14" fill="#8b94a7">ID switches</text>
+    <text x="354" y="276" class="mono b" font-size="20" fill="#ff6b6b" text-anchor="end">2</text>
+    <text x="354" y="276" class="mono a" font-size="20" fill="#3ddc84" text-anchor="end">0</text>
+  </g>
+
+  <!-- tile 3: shadow mask -->
+  <g transform="translate(808,56)">
+    <rect width="372" height="304" rx="10" fill="#161a22" stroke="#272d3a"/>
+    <text x="18" y="30" class="sans" font-size="17" font-weight="700" fill="#e8ebf1">Shadow bleed → roof only</text>
+    <g transform="translate(26,46)">
+      <rect width="320" height="190" fill="#6f8f4e"/>
+      <polygon points="210,40 236,62 236,142 116,142 90,120 210,120" fill="#33452a" opacity=".8"/>
+      <polygon points="90,40 210,40 210,120 90,120" fill="#c7b8a3"/><line x1="90" y1="80" x2="210" y2="80" stroke="#b3a48e" stroke-width="2"/>
+      <circle cx="40" cy="26" r="10" fill="#f0c94a"/><text x="56" y="31" class="mono" font-size="10" fill="#fff">sun</text>
+      <g class="b"><polygon points="90,40 210,40 236,62 236,142 116,142 90,120" fill="#ff6b6b" fill-opacity=".3" stroke="#ff6b6b" stroke-width="2.5" stroke-linejoin="round"/></g>
+      <g class="a"><polygon points="90,40 210,40 210,120 90,120" fill="#3ddc84" fill-opacity=".3" stroke="#3ddc84" stroke-width="2.5"/></g>
+    </g>
+    <text x="18" y="276" class="mono" font-size="14" fill="#8b94a7">building mask px²</text>
+    <text x="354" y="276" class="mono b" font-size="20" fill="#ff6b6b" text-anchor="end">14,320</text>
+    <text x="354" y="276" class="mono a" font-size="20" fill="#3ddc84" text-anchor="end">9,600</text>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" role="img" aria-label="QA report: all four annotation exports pass validation; IoU example loose 0.56, tight 0.97">
+  <style>
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:15px;white-space:pre}
+    .l{opacity:0;animation:in 12s infinite}
+    .l1{animation-delay:0s}.l2{animation-delay:.6s}.l3{animation-delay:1.1s}.l4{animation-delay:1.6s}.l5{animation-delay:2.1s}.l6{animation-delay:2.8s}
+    @keyframes in{0%{opacity:0}3%,92%{opacity:1}100%{opacity:0}}
+    .cur{animation:blink 1s steps(1) infinite}
+    @keyframes blink{50%{opacity:0}}
+  </style>
+  <rect width="1000" height="300" rx="14" fill="#0b0d12"/>
+  <rect x="1" y="1" width="998" height="298" rx="13" fill="none" stroke="#272d3a"/>
+  <rect x="1" y="1" width="998" height="40" rx="13" fill="#161a22"/>
+  <rect x="1" y="28" width="998" height="13" fill="#161a22"/>
+  <circle cx="26" cy="21" r="6" fill="#ff5f57"/><circle cx="46" cy="21" r="6" fill="#febc2e"/><circle cx="66" cy="21" r="6" fill="#28c840"/>
+  <text x="500" y="26" class="mono" font-size="13" fill="#6f7a8f" text-anchor="middle" style="font-size:13px">data-annotation-samples — QA before delivery</text>
+  <g class="mono" xml:space="preserve">
+    <text x="28" y="78" class="l l1" fill="#e8ebf1"><tspan fill="#ff5c93">$</tspan> python scripts/validate_annotations.py</text>
+    <text y="114" class="l l2" fill="#a3abbd"><tspan x="28" fill="#3ddc84">PASS</tspan><tspan x="100">coco_segmentation.json</tspan><tspan x="380" fill="#6f7a8f">9 polygons</tspan></text>
+    <text y="142" class="l l3" fill="#a3abbd"><tspan x="28" fill="#3ddc84">PASS</tspan><tspan x="100">coco_keypoints.json</tspan><tspan x="380" fill="#6f7a8f">7 frames × 17 keypoints</tspan></text>
+    <text y="170" class="l l4" fill="#a3abbd"><tspan x="28" fill="#3ddc84">PASS</tspan><tspan x="100">tracks_mot.txt</tspan><tspan x="380" fill="#6f7a8f">1,991 boxes · 300 frames</tspan></text>
+    <text y="198" class="l l5" fill="#a3abbd"><tspan x="28" fill="#3ddc84">PASS</tspan><tspan x="100">ner_07.jsonl</tspan><tspan x="380" fill="#6f7a8f">13 spans</tspan></text>
+    <text y="240" class="l l6" fill="#e8ebf1"><tspan x="28">IoU example</tspan><tspan x="150">loose=</tspan><tspan fill="#ff6b6b">0.56</tspan><tspan x="270">tight=</tspan><tspan fill="#3ddc84">0.97</tspan><tspan x="380" fill="#3ddc84">4/4 files clean</tspan></text>
+    <rect class="cur" x="28" y="258" width="10" height="18" fill="#ff5c93"/>
+  </g>
+</svg>
