@@ -1,0 +1,1036 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Sai Pavan Vanka Annotation Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a labeling-tool workspace. Hero with live crosshair readout, then each sample as a playing clip + spec panel, exports underneath. */
+:root{
+  --paper:#f3f5f8; --panel:#ffffff; --ink:#131722; --muted:#586174; --line:#d8dde6; --soft:#e9edf3;
+  --accent:#d81b60; --accent-ink:#ffffff;
+  --c-car:#ff2e7a; --c-truck:#2f7bff; --c-ped:#00b89c; --c-bike:#9b55ff; --c-light:#f0a400;
+  --c-per:#ff2e7a; --c-org:#2f7bff; --c-loc:#00b89c; --c-date:#f0a400; --c-money:#9b55ff;
+  --good:#1f9d55; --bad:#d64545;
+  --f-display:"Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --f-body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0e1117; --panel:#161a22; --ink:#e8ebf1; --muted:#9aa3b5; --line:#272d3a; --soft:#1d222c;
+    --accent:#ff5c93; --accent-ink:#1a0710; --good:#4ccf86; --bad:#ff7070; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0e1117; --panel:#161a22; --ink:#e8ebf1; --muted:#9aa3b5; --line:#272d3a; --soft:#1d222c;
+  --accent:#ff5c93; --accent-ink:#1a0710; --good:#4ccf86; --bad:#ff7070; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.1}
+p{margin:0}
+.mono{font-family:var(--f-mono)}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{font-family:var(--f-display);font-weight:800;font-size:18px;display:flex;align-items:center;gap:10px}
+.brand .sq{width:14px;height:14px;border:2px solid var(--accent);position:relative}
+.brand .sq::after{content:"";position:absolute;right:-5px;bottom:-5px;width:6px;height:6px;background:var(--accent)}
+.bar nav{display:flex;gap:18px;flex-wrap:wrap}
+.bar nav a{color:var(--muted);text-decoration:none;font-size:14px}
+.bar nav a:hover{color:var(--ink)}
+@media (max-width:640px){.bar nav{display:none}}
+
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:40px 40px;background-position:-1px -1px}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--paper) 30%,color-mix(in srgb,var(--paper) 55%,transparent));pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.35fr 1fr;gap:40px;padding-block:72px 64px;align-items:center}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-block:48px}}
+.hero h1{font-size:clamp(40px,7vw,80px);font-weight:800;letter-spacing:-.03em}
+.hero h1 .box{position:relative;display:inline-block;padding:0 .08em}
+.hero h1 .box::before{content:"";position:absolute;inset:-.02em -.04em -.06em;border:3px solid var(--accent)}
+.hero h1 .box .tag{position:absolute;left:-.04em;top:-1.55em;font:500 12px/1 var(--f-mono);letter-spacing:.04em;background:var(--accent);color:var(--accent-ink);padding:5px 7px;white-space:nowrap}
+.hero .role{font-family:var(--f-display);font-weight:500;font-size:clamp(20px,2.6vw,28px);margin-top:22px}
+.hero .lede{max-width:56ch;color:var(--muted);margin-top:14px;font-size:17px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:24px;font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 15px/1 var(--f-body);padding:13px 18px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.cross{position:absolute;inset:0;pointer-events:none}
+.cross .v,.cross .h{position:absolute;background:var(--accent);opacity:.45}
+.cross .v{width:1px;top:0;bottom:0;left:72%}
+.cross .h{height:1px;left:0;right:0;top:38%}
+.cross .read{position:absolute;left:72%;top:38%;transform:translate(8px,8px);font:500 11px/1 var(--f-mono);background:var(--ink);color:var(--paper);padding:4px 6px;white-space:nowrap}
+@media (max-width:860px){.cross{display:none}}
+
+.palette{background:var(--panel);border:1px solid var(--line);padding:20px;box-shadow:0 18px 40px -24px rgba(10,20,40,.35)}
+.palette h3{font-size:15px;font-family:var(--f-mono);font-weight:500;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.palette ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
+.palette li{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:center;font-size:15px;padding:8px 10px;border:1px solid var(--line)}
+.palette li .sw{width:14px;height:14px;border:2px solid currentColor}
+.palette kbd{font:500 12px var(--f-mono);border:1px solid var(--line);border-bottom-width:2px;padding:2px 7px;color:var(--muted)}
+.palette .foot{margin-top:14px;font:12px var(--f-mono);color:var(--muted);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+
+section{padding-block:72px}
+.sec-head{display:grid;grid-template-columns:1fr 1.2fr;gap:24px 48px;align-items:end;margin-bottom:36px}
+.sec-head h2{font-size:clamp(30px,4.4vw,46px);font-weight:800;letter-spacing:-.02em;margin-top:8px}
+.sec-head p{color:var(--muted);max-width:60ch}
+@media (max-width:860px){.sec-head{grid-template-columns:1fr}}
+
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.skill{background:var(--panel);padding:22px;display:grid;gap:8px;align-content:start}
+.skill h3{font-size:19px;font-weight:700}
+.skill p{color:var(--muted);font-size:15px}
+.skill .fmt{font:12px var(--f-mono);color:var(--muted);margin-top:4px}
+@media (max-width:860px){.skills{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.skills{grid-template-columns:1fr}}
+
+.project{border-top:1px solid var(--line);padding-block:48px}
+.project:first-of-type{border-top:0;padding-top:0}
+.p-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;margin-bottom:20px}
+.p-head h3{font-size:clamp(24px,3vw,32px);font-weight:700;letter-spacing:-.01em;margin-top:6px}
+.p-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:900px){.p-grid{grid-template-columns:1fr}}
+.stage{background:var(--panel);border:1px solid var(--line);min-width:0}
+.stage-bar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;padding:10px 12px;border-bottom:1px solid var(--line);font:12px var(--f-mono);color:var(--muted)}
+.stage-bar .left{display:flex;align-items:center;gap:10px;min-width:0;flex-wrap:wrap}
+.stage-bar .right{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.readout{font-variant-numeric:tabular-nums;color:var(--ink)}
+.stage svg{display:block;width:100%;height:auto;max-width:100%}
+.play{font:500 12px var(--f-mono);display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:5px 10px;cursor:pointer}
+.play:hover{border-color:var(--accent);color:var(--accent)}
+.play::before{content:"";width:0;height:0;border-left:8px solid currentColor;border-top:5px solid transparent;border-bottom:5px solid transparent}
+.play[aria-pressed="true"]::before{width:8px;height:10px;border:0;border-left:3px solid currentColor;border-right:3px solid currentColor}
+.live{display:inline-flex;align-items:center;gap:6px}
+.live i{width:7px;height:7px;border-radius:50%;background:var(--muted)}
+.live.on i{background:var(--accent)}
+@media (prefers-reduced-motion:no-preference){.live.on i{animation:blink 1.2s infinite}}
+@keyframes blink{50%{opacity:.25}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:10px 12px;border-top:1px solid var(--line)}
+.chip{font:500 12px var(--f-mono);display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer}
+.chip .sw{width:10px;height:10px;background:currentColor;display:inline-block}
+.chip[aria-pressed="false"]{opacity:.45;text-decoration:line-through}
+.chip span.n{color:var(--muted)}
+.ctrl{display:flex;align-items:center;gap:8px;font:12px var(--f-mono);color:var(--muted)}
+.ctrl input[type=range]{width:100px;accent-color:var(--accent)}
+.ctrl input[type=checkbox]{accent-color:var(--accent)}
+
+.spec{background:var(--panel);border:1px solid var(--line);padding:20px;display:grid;gap:16px;min-width:0}
+.spec dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0;font-size:14px}
+.spec dt{font:12px/1.9 var(--f-mono);color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.spec dd{margin:0}
+.spec .note{font-size:14px;color:var(--muted);border-left:2px solid var(--accent);padding-left:12px}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font:500 11px var(--f-mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--soft)}
+tbody tr:last-child td{border-bottom:0}
+tbody tr.hot{background:color-mix(in srgb,var(--accent) 10%,transparent)}
+tbody tr.gone td{color:var(--muted)}
+td .dot{display:inline-block;width:9px;height:9px;margin-right:6px;vertical-align:baseline}
+td.mono{font-family:var(--f-mono);font-size:12px}
+
+details.export{margin-top:16px;border:1px solid var(--line);background:var(--panel)}
+details.export summary{cursor:pointer;padding:12px 14px;font:500 13px var(--f-mono);display:flex;justify-content:space-between;gap:12px;list-style:none}
+details.export summary::-webkit-details-marker{display:none}
+details.export summary::after{content:"+";color:var(--muted)}
+details.export[open] summary::after{content:"−"}
+.tabs{display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow-x:auto}
+.tabs button{font:500 12px var(--f-mono);background:transparent;border:0;border-right:1px solid var(--line);padding:9px 14px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--ink);background:var(--soft)}
+pre{margin:0;padding:14px;overflow:auto;max-height:300px;font:12px/1.55 var(--f-mono);color:var(--ink);background:var(--soft)}
+.exp-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 10px;font:12px var(--f-mono);color:var(--muted)}
+.copy{font:500 12px var(--f-mono);border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:6px 10px;cursor:pointer}
+.copy:hover{border-color:var(--accent);color:var(--accent)}
+
+.doc{background:var(--panel);border:1px solid var(--line);min-width:0}
+.doc .sent{padding:18px;border-bottom:1px solid var(--line);font-size:17px;line-height:2.25}
+.doc .sent:last-child{border-bottom:0}
+.ent{padding:3px 4px;border-bottom:2px solid var(--lc);background:color-mix(in srgb,var(--lc) 15%,transparent);white-space:nowrap}
+.ent b{font:600 10px var(--f-mono);letter-spacing:.04em;margin-left:5px;padding:1px 4px;vertical-align:2px;color:var(--panel);background:var(--lc)}
+.legend{display:flex;flex-wrap:wrap;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line);font:12px var(--f-mono);color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px}
+
+.cls-list{display:grid;background:var(--panel);border:1px solid var(--line)}
+.cls{display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:16px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.cls:last-child{border-bottom:0}
+.cls q{quotes:none;font-size:16px}
+.cls .why{font-size:13px;color:var(--muted);margin-top:6px}
+.cls .lbls{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.pill{font:500 12px var(--f-mono);padding:3px 8px;border:1px solid var(--line);background:var(--soft)}
+.pill.neg{color:var(--bad);border-color:color-mix(in srgb,var(--bad) 40%,var(--line))}
+.pill.pos{color:var(--good);border-color:color-mix(in srgb,var(--good) 40%,var(--line))}
+.pill.neu{color:var(--muted)}
+@media (max-width:640px){.cls{grid-template-columns:1fr}.cls .lbls{flex-direction:row;flex-wrap:wrap}}
+
+.rlhf .prompt{background:var(--panel);border:1px solid var(--line);padding:16px 18px;margin-bottom:16px}
+.rlhf .prompt p{font-size:17px;margin-top:6px}
+.resp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.resp-grid{grid-template-columns:1fr}}
+.resp{background:var(--panel);border:1px solid var(--line);display:grid;grid-template-rows:auto 1fr auto;min-width:0}
+.resp.win{border-color:var(--good);box-shadow:inset 0 3px 0 var(--good)}
+.resp header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);font:500 13px var(--f-mono)}
+.resp .body{padding:16px;font-size:15px;display:grid;gap:10px;align-content:start}
+.scores{border-top:1px solid var(--line);padding:12px 16px;display:grid;gap:8px}
+.score{display:grid;grid-template-columns:110px 1fr 34px;gap:10px;align-items:center;font:12px var(--f-mono);color:var(--muted)}
+.track{height:8px;background:var(--soft);position:relative}
+.track span{position:absolute;inset:0 auto 0 0;background:var(--ink)}
+.resp.win .track span{background:var(--good)}
+.score b{color:var(--ink);text-align:right;font-weight:500}
+.verdict{margin-top:16px;background:var(--panel);border:1px solid var(--line);padding:16px 18px;display:grid;gap:8px}
+.verdict .row{display:flex;flex-wrap:wrap;gap:8px 20px;font:13px var(--f-mono);color:var(--muted)}
+.verdict .row b{color:var(--ink);font-weight:500}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);counter-reset:s}
+.steps li{background:var(--panel);padding:20px;counter-increment:s;display:grid;gap:6px;align-content:start}
+.steps li::before{content:"step " counter(s);font:12px var(--f-mono);color:var(--accent)}
+.steps h3{font-size:17px}
+.steps p{font-size:14px;color:var(--muted)}
+@media (max-width:960px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.log td{white-space:normal;min-width:140px;vertical-align:top;font-size:14px}
+.log td:first-child{min-width:110px}
+
+.tools{display:flex;flex-wrap:wrap;gap:8px}
+.tools span{font:500 13px var(--f-mono);border:1px solid var(--line);padding:7px 12px;background:var(--panel)}
+
+.contact{background:var(--ink);color:var(--paper)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media (max-width:820px){.contact .wrap{grid-template-columns:1fr}}
+.contact h2{font-size:clamp(32px,5vw,56px);font-weight:800;letter-spacing:-.02em}
+.contact p{color:color-mix(in srgb,var(--paper) 72%,var(--ink));margin-top:14px;max-width:46ch}
+.cards{display:grid;gap:10px}
+.cline{display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:12px;align-items:center;padding:14px 16px;border:1px solid color-mix(in srgb,var(--paper) 22%,var(--ink))}
+.cline .k{font:12px var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:color-mix(in srgb,var(--paper) 60%,var(--ink))}
+.cline .v{font:500 17px var(--f-mono);user-select:all;overflow-wrap:anywhere}
+.cline a.v{color:var(--paper);text-decoration:none}
+.cline .copy{background:transparent;color:var(--paper);border-color:color-mix(in srgb,var(--paper) 30%,var(--ink))}
+@media (max-width:480px){.cline{grid-template-columns:1fr auto}.cline .k{grid-column:1/-1}}
+footer{background:var(--ink);color:color-mix(in srgb,var(--paper) 55%,var(--ink));font:12px var(--f-mono)}
+/* problems & solutions */
+.cases{display:grid;gap:20px}
+.case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--panel);border:1px solid var(--line)}
+.case-text{padding:24px;display:grid;gap:16px;align-content:start;border-right:1px solid var(--line)}
+.case-text h3{font-size:clamp(21px,2.4vw,26px);font-weight:700;margin-top:6px}
+@media (max-width:860px){.case{grid-template-columns:1fr}.case-text{border-right:0;border-bottom:1px solid var(--line)}}
+.psr{display:grid;gap:12px;margin:0}
+.psr div{display:grid;gap:3px}
+.psr dt{font:500 12px var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--bad)}
+.psr dt.sol{color:var(--accent)}
+.psr dt.res{color:var(--good)}
+.psr dd{margin:0;font-size:15px}
+.case-vis{display:grid;grid-template-rows:auto 1fr auto;min-width:0;background:var(--soft)}
+.ba{display:flex;border-bottom:1px solid var(--line)}
+.ba button{flex:1;font:500 12px var(--f-mono);text-transform:uppercase;letter-spacing:.06em;padding:11px;background:transparent;border:0;color:var(--muted);cursor:pointer}
+.ba button[data-s="before"][aria-selected="true"]{background:var(--panel);color:var(--bad);box-shadow:inset 0 -2px 0 var(--bad)}
+.ba button[data-s="after"][aria-selected="true"]{background:var(--panel);color:var(--good);box-shadow:inset 0 -2px 0 var(--good)}
+.vis-body{padding:16px;display:grid;place-items:center;min-height:230px}
+.vis-body svg{width:100%;max-width:420px;height:auto;display:block}
+.metric{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;padding:12px 16px;border-top:1px solid var(--line);font:13px var(--f-mono);color:var(--muted);background:var(--panel);font-variant-numeric:tabular-nums}
+.metric b{font-weight:500;padding:1px 5px}
+.metric b.b{color:var(--bad)} .metric b.a{color:var(--good)}
+.metric b.cur{outline:1.5px solid currentColor}
+.idgrid{display:grid;grid-template-columns:auto repeat(8,minmax(0,1fr));gap:4px;width:100%;max-width:440px;font:12px var(--f-mono);align-items:center}
+.idgrid .h{color:var(--muted);text-align:center;font-size:11px}
+.idgrid .lab{color:var(--muted);padding-right:6px;white-space:nowrap}
+.idgrid .cell{text-align:center;padding:7px 0;color:#fff;font-weight:500}
+.idgrid .cell.swap{outline:2px solid var(--bad);outline-offset:-2px}
+.cross-mark{grid-column:1/-1;font-size:12px;color:var(--muted);margin-top:6px;text-align:center}
+.tcard{width:100%;max-width:440px;background:var(--panel);border:1px solid var(--line);padding:16px;display:grid;gap:12px}
+.tcard q{quotes:none;font-size:16px}
+.tcard .kw{background:color-mix(in srgb,var(--c-light) 30%,transparent)}
+.tcard .lbls{display:flex;flex-wrap:wrap;gap:6px}
+.tcard .why{font-size:13px;color:var(--muted)}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.svc{grid-template-columns:1fr}}
+.svc-card{background:var(--panel);border:1px solid var(--line);padding:24px;display:grid;gap:12px;align-content:start}
+.svc-card.feat{border-color:var(--accent);box-shadow:inset 0 3px 0 var(--accent)}
+.svc-card h3{font-size:22px;font-weight:700}
+.svc-card .for{font-size:14px;color:var(--muted)}
+.svc-card ul{margin:0;padding:0;list-style:none;display:grid;gap:7px;font-size:15px}
+.svc-card li{display:grid;grid-template-columns:16px 1fr;gap:8px}
+.svc-card li::before{content:"";width:10px;height:10px;border:2px solid var(--accent);margin-top:7px}
+.svc-card .tag{font:500 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.every{margin-top:20px;display:grid;grid-template-columns:auto 1fr;gap:12px 28px;align-items:center;background:var(--panel);border:1px solid var(--line);padding:18px 22px}
+.every .tools span{background:var(--soft)}
+@media (max-width:700px){.every{grid-template-columns:1fr}}
+
+footer .wrap{padding-block:20px;border-top:1px solid color-mix(in srgb,var(--paper) 15%,var(--ink));display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <div class="brand"><span class="sq" aria-hidden="true"></span>Sai Pavan Vanka</div>
+    <nav aria-label="Sections">
+      <a href="#work">Proof of work</a><a href="#problems">Problems I solve</a><a href="#services">Work with me</a><a href="#process">Process</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="hero">
+  <div class="cross" aria-hidden="true"><div class="v" id="cv"></div><div class="h" id="ch"></div><div class="read" id="cr">x 0812 · y 0204</div></div>
+  <div class="wrap">
+    <div>
+      <h1><span class="box"><span class="tag">person · 0.99</span>Sai Pavan</span> Vanka</h1>
+      <p class="role">Data Annotation Specialist</p>
+      <p class="lede">Hi, I'm Sai. I label images, video and text for machine learning teams: object tracking, polygon segmentation, pose keypoints, named entities, intent and sentiment, and LLM response ranking. Every sample below is annotated work you can play, pause, inspect and export.</p>
+      <div class="meta"><span>Dallas, TX</span><span>saivanka1999@gmail.com</span></div>
+      <div class="cta">
+        <a class="btn" href="#work">See the annotated samples</a>
+        <a class="btn ghost" href="#services">Request a pilot batch</a>
+      </div>
+    </div>
+    <aside class="palette" aria-label="Label set">
+      <h3><span>label_set / street_cam04</span><span>v1.2</span></h3>
+      <ul>
+        <li style="color:var(--c-car)"><span class="sw"></span><span style="color:var(--ink)">car</span><kbd>1</kbd></li>
+        <li style="color:var(--c-truck)"><span class="sw"></span><span style="color:var(--ink)">truck</span><kbd>2</kbd></li>
+        <li style="color:var(--c-ped)"><span class="sw"></span><span style="color:var(--ink)">pedestrian</span><kbd>3</kbd></li>
+        <li style="color:var(--c-bike)"><span class="sw"></span><span style="color:var(--ink)">cyclist</span><kbd>4</kbd></li>
+        <li style="color:var(--c-light)"><span class="sw"></span><span style="color:var(--ink)">traffic_light</span><kbd>5</kbd></li>
+      </ul>
+      <div class="foot"><span>attrs: occluded, truncated, state</span><span>min box: 10 px</span></div>
+    </aside>
+  </div>
+</div>
+
+<main>
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Proof of work</p><h2>Annotated samples, video and text</h2></div>
+      <p>Each sample is labeled to a written guideline and exported in the format a training pipeline expects. The clips play with their labels tracking along; pause on any frame, toggle classes to check coverage, and open the export to see the raw output.</p>
+    </div>
+
+    <!-- 1 tracking -->
+    <article class="project" id="p-bbox">
+      <div class="p-head">
+        <div><p class="eyebrow">Video · Multi-object tracking · Bounding boxes</p><h3>Street camera tracking for autonomous driving</h3></div>
+        <span class="eyebrow">street_cam04.mp4 · 640 × 400 · 30 fps</span>
+      </div>
+      <div class="p-grid">
+        <div class="stage" id="bb-stage">
+          <div class="stage-bar">
+            <div class="left"><button class="play" id="bb-play" aria-pressed="true">Pause</button><span class="readout" id="bb-readout">frame 0000</span></div>
+            <div class="right"><label class="ctrl"><input type="checkbox" id="bb-tags" checked> labels</label></div>
+          </div>
+          <svg id="bb-svg" viewBox="0 0 640 400" role="img" aria-label="Moving street scene where cars, a truck, pedestrians and a cyclist are tracked with labeled bounding boxes"></svg>
+          <div class="chips" id="bb-chips"></div>
+        </div>
+        <div class="spec">
+          <dl>
+            <dt>Task</dt><dd>Box every road user on every frame and keep one track ID per object</dd>
+            <dt>Classes</dt><dd>car, truck, pedestrian, cyclist, traffic_light</dd>
+            <dt>Attributes</dt><dd>occluded (none / partial / heavy), truncated, light state</dd>
+            <dt>Rule</dt><dd>Box the full object; drop the track while under 10 px in frame</dd>
+          </dl>
+          <p class="note">IDs never change as objects cross. When the truck passes in front of pedestrian #5, the occlusion flag rises to heavy for those frames. Vehicles at the edges are kept and marked truncated, and the light's state flips on the frame it changes.</p>
+          <div class="tbl-wrap"><table id="bb-table"><thead><tr><th>id</th><th>class</th><th>x, y, w, h</th><th>attributes</th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+      <details class="export" id="bb-exp"><summary>Export: MOT tracks / YOLO frame</summary>
+        <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-fmt="mot">tracks.txt (MOT)</button><button role="tab" aria-selected="false" data-fmt="yolo">current frame (YOLO)</button></div>
+        <pre id="bb-out"></pre><div class="exp-foot"><span id="bb-exp-note"></span><button class="copy" data-copy="bb-out">Copy</button></div>
+      </details>
+    </article>
+
+    <!-- 2 segmentation -->
+    <article class="project" id="p-seg">
+      <div class="p-head">
+        <div><p class="eyebrow">Image · Semantic segmentation · Polygons</p><h3>Aerial land-use map</h3></div>
+        <span class="eyebrow">tile_33_18.png · 640 × 400</span>
+      </div>
+      <div class="p-grid">
+        <div class="stage" id="seg-stage">
+          <div class="stage-bar">
+            <div class="left"><button class="play" id="seg-play" aria-pressed="true">Pause</button><span class="readout" id="seg-status">labeling…</span></div>
+            <div class="right">
+              <label class="ctrl"><input type="range" id="seg-op" min="0" max="90" value="45" aria-label="Mask opacity"><span id="seg-op-v">45%</span></label>
+              <label class="ctrl"><input type="checkbox" id="seg-pts" checked> vertices</label>
+            </div>
+          </div>
+          <svg id="seg-svg" viewBox="0 0 640 400" role="img" aria-label="Aerial tile being labeled polygon by polygon into water, road, building and vegetation masks while cloud shadows drift across"></svg>
+          <div class="chips" id="seg-chips"></div>
+        </div>
+        <div class="spec">
+          <dl>
+            <dt>Task</dt><dd>Polygon every region into one of four land-use classes</dd>
+            <dt>Classes</dt><dd>water, road, building, vegetation</dd>
+            <dt>Rule</dt><dd>Follow roof edges, not cast shadows; vertices every 20–40 px on curves</dd>
+          </dl>
+          <p class="note">The clip replays my labeling pass vertex by vertex. Building shadows and the drifting cloud shadows stay unlabeled, and the road polygon stops at the riverbank instead of overlapping the water mask.</p>
+          <div class="tbl-wrap"><table id="seg-table"><thead><tr><th>class</th><th>polygons</th><th>vertices</th><th>area px²</th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+      <details class="export"><summary>Export: COCO polygon segmentation</summary>
+        <pre id="seg-out"></pre><div class="exp-foot"><span></span><button class="copy" data-copy="seg-out">Copy</button></div>
+      </details>
+    </article>
+
+    <!-- 3 keypoints -->
+    <article class="project" id="p-kp">
+      <div class="p-head">
+        <div><p class="eyebrow">Video · Pose tracking · 17 keypoints</p><h3>Exercise pose tracking for a fitness app</h3></div>
+        <span class="eyebrow">jumping_jacks.mp4 · 300 × 400 · 30 fps</span>
+      </div>
+      <div class="p-grid">
+        <div class="stage" id="kp-stage">
+          <div class="stage-bar">
+            <div class="left"><button class="play" id="kp-play" aria-pressed="true">Pause</button><span class="readout" id="kp-readout">frame 0000</span></div>
+            <div class="right"><label class="ctrl"><input type="checkbox" id="kp-skel" checked> skeleton</label></div>
+          </div>
+          <svg id="kp-svg" viewBox="0 0 300 400" role="img" aria-label="Person doing jumping jacks with 17 tracked body keypoints and skeleton lines" style="max-height:540px;margin-inline:auto"></svg>
+        </div>
+        <div class="spec">
+          <dl>
+            <dt>Task</dt><dd>Place COCO-17 keypoints on every frame and set visibility per point</dd>
+            <dt>Visibility</dt><dd>2 visible · 1 occluded but inferable · 0 not labeled</dd>
+            <dt>Rule</dt><dd>Left and right are the subject's own sides, not the viewer's</dd>
+          </dl>
+          <p class="note">The subject faces the camera, so their left side sits on the image's right (pink points). The left ear stays hidden under hair through the whole clip, so it is placed by inference and marked v=1 (hollow dot). Pause and hover any point to read its coordinates.</p>
+          <div class="tbl-wrap"><table id="kp-table"><thead><tr><th>#</th><th>keypoint</th><th>x</th><th>y</th><th>v</th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+      <details class="export" id="kp-exp"><summary>Export: COCO keypoints (current frame)</summary>
+        <pre id="kp-out"></pre><div class="exp-foot"><span id="kp-exp-note"></span><button class="copy" data-copy="kp-out">Copy</button></div>
+      </details>
+    </article>
+
+    <!-- 4 NER -->
+    <article class="project" id="p-ner">
+      <div class="p-head">
+        <div><p class="eyebrow">Text · Named entity recognition</p><h3>Entity spans in business news</h3></div>
+        <span class="eyebrow">batch ner_07 · 3 of 250 lines</span>
+      </div>
+      <div class="p-grid">
+        <div class="doc">
+          <div class="legend" id="ner-legend"></div>
+          <div id="ner-doc"></div>
+        </div>
+        <div class="spec">
+          <dl>
+            <dt>Task</dt><dd>Mark character-level spans for five entity types</dd>
+            <dt>Labels</dt><dd>PERSON, ORG, LOC, DATE, MONEY</dd>
+            <dt>Rule</dt><dd>Include titles with names; currency symbol belongs to MONEY</dd>
+          </dl>
+          <p class="note">"Dr. Ana Ortiz" keeps the title inside the PERSON span per guideline 2.1. "next Tuesday" is a relative date and still counts as DATE.</p>
+          <div class="tbl-wrap"><table id="ner-table"><thead><tr><th>span</th><th>label</th><th>start</th><th>end</th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+      <details class="export"><summary>Export: spaCy-style JSONL</summary>
+        <pre id="ner-out"></pre><div class="exp-foot"><span></span><button class="copy" data-copy="ner-out">Copy</button></div>
+      </details>
+    </article>
+
+    <!-- 5 classification -->
+    <article class="project" id="p-cls">
+      <div class="p-head">
+        <div><p class="eyebrow">Text · Intent and sentiment classification</p><h3>Customer support tickets</h3></div>
+        <span class="eyebrow">batch support_12 · 5 of 400 tickets</span>
+      </div>
+      <div class="cls-list" id="cls-list"></div>
+    </article>
+
+    <!-- 6 RLHF -->
+    <article class="project rlhf" id="p-rlhf">
+      <div class="p-head">
+        <div><p class="eyebrow">Text · LLM evaluation · Pairwise preference</p><h3>Ranking chatbot responses</h3></div>
+        <span class="eyebrow">rubric: 1–7 per axis</span>
+      </div>
+      <div class="prompt"><p class="eyebrow">User prompt</p><p>My sourdough starter smells like nail polish remover. Is it ruined?</p></div>
+      <div class="resp-grid">
+        <div class="resp win">
+          <header><span>Response A</span><span class="pill pos">preferred</span></header>
+          <div class="body">
+            <p>No, it's almost certainly fine. That acetone smell usually means the starter is hungry: the yeast and bacteria have used up their food and are producing byproducts as they starve.</p>
+            <p>Discard all but a few tablespoons, feed it with fresh flour and water, and feed it more often, or at a higher flour ratio, for the next few days. The smell should fade within one or two feedings.</p>
+            <p>Throw it out only if you see pink, orange or fuzzy mold.</p>
+          </div>
+          <div class="scores" data-scores="7,7,6,7"></div>
+        </div>
+        <div class="resp">
+          <header><span>Response B</span><span class="pill neu">not preferred</span></header>
+          <div class="body">
+            <p>A nail polish smell means your starter has been contaminated by harmful bacteria. It is not safe to use and you should throw it away immediately.</p>
+            <p>Sterilize your jar with boiling water and start a new starter from scratch. In the future, keep it covered tightly to prevent contamination.</p>
+          </div>
+          <div class="scores" data-scores="3,2,5,4"></div>
+        </div>
+      </div>
+      <div class="verdict">
+        <div class="row"><span>preference <b>A ≫ B</b></span><span>strength <b>much better</b></span><span>confidence <b>high</b></span></div>
+        <p><strong>Rationale.</strong> B makes a factual error: the acetone smell signals a hungry starter, not contamination, and B tells the user to discard something that is safe. A is accurate, gives a concrete fix and names the real warning sign (colored or fuzzy mold). Both are clear and safe in tone, so the gap comes from accuracy and helpfulness.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="problems" style="background:var(--panel);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Problem → solution</p><h2>Problems I solve</h2></div>
+      <p>The common ways labeled data goes wrong, how I handle each one, and the difference it makes, measured on my own samples. Each comparison flips between before and after; click either side to hold it.</p>
+    </div>
+    <div class="cases">
+
+      <article class="case" data-k="iou">
+        <div class="case-text">
+          <div><p class="eyebrow">Object detection</p><h3>Loose boxes teach the model the wrong size</h3></div>
+          <dl class="psr">
+            <div><dt>Problem</dt><dd>Fast labeling leaves padding around objects. The model learns that background belongs to the object, and localization accuracy drops.</dd></div>
+            <div><dt class="sol">How I solve it</dt><dd>I zoom to the object edge, snap each side to the outermost visible pixel, and check every box against its reference during self-QA.</dd></div>
+            <div><dt class="res">Result in the sample</dt><dd>Overlap with the reference box (IoU) rises from a failing score to near-perfect.</dd></div>
+          </dl>
+        </div>
+        <div class="case-vis">
+          <div class="ba" role="tablist"><button role="tab" data-s="before" aria-selected="false">Before</button><button role="tab" data-s="after" aria-selected="true">After</button></div>
+          <div class="vis-body"></div><div class="metric"></div>
+        </div>
+      </article>
+
+      <article class="case" data-k="track">
+        <div class="case-text">
+          <div><p class="eyebrow">Video tracking</p><h3>IDs swap when people cross paths</h3></div>
+          <dl class="psr">
+            <div><dt>Problem</dt><dd>When two pedestrians pass each other, frame-by-frame labeling often hands each one the other's ID. The tracker then learns that identities jump.</dd></div>
+            <div><dt class="sol">How I solve it</dt><dd>I scrub forward and back through every crossing, follow each person by clothing and direction of travel, and keep one ID per person for the whole clip.</dd></div>
+            <div><dt class="res">Result in the sample</dt><dd>ID switches across the crossing drop to zero.</dd></div>
+          </dl>
+        </div>
+        <div class="case-vis">
+          <div class="ba" role="tablist"><button role="tab" data-s="before" aria-selected="false">Before</button><button role="tab" data-s="after" aria-selected="true">After</button></div>
+          <div class="vis-body"></div><div class="metric"></div>
+        </div>
+      </article>
+
+      <article class="case" data-k="shadow">
+        <div class="case-text">
+          <div><p class="eyebrow">Segmentation</p><h3>Masks bleed into shadows</h3></div>
+          <dl class="psr">
+            <div><dt>Problem</dt><dd>In aerial images, building shadows are dark and sharp-edged, so they often get traced as part of the roof. Area estimates and footprints come out too large.</dd></div>
+            <div><dt class="sol">How I solve it</dt><dd>I trace roof edges only, using the sun direction to tell the roof line from the shadow line, then compare the polygon against the roof texture.</dd></div>
+            <div><dt class="res">Result in the sample</dt><dd>The shadow is removed from the building mask entirely.</dd></div>
+          </dl>
+        </div>
+        <div class="case-vis">
+          <div class="ba" role="tablist"><button role="tab" data-s="before" aria-selected="false">Before</button><button role="tab" data-s="after" aria-selected="true">After</button></div>
+          <div class="vis-body"></div><div class="metric"></div>
+        </div>
+      </article>
+
+      <article class="case" data-k="text">
+        <div class="case-text">
+          <div><p class="eyebrow">Text classification</p><h3>Keyword labeling misreads sarcasm</h3></div>
+          <dl class="psr">
+            <div><dt>Problem</dt><dd>Words like "great" and "thanks" push labelers toward positive sentiment, even when the customer is clearly angry. The model then learns the wrong signal.</dd></div>
+            <div><dt class="sol">How I solve it</dt><dd>I label what the writer means, not the words they use, and write a one-line reason for every sarcastic or mixed-intent item so reviewers can check it.</dd></div>
+            <div><dt class="res">Result in the sample</dt><dd>The label matches the customer's actual meaning, with the reasoning recorded.</dd></div>
+          </dl>
+        </div>
+        <div class="case-vis">
+          <div class="ba" role="tablist"><button role="tab" data-s="before" aria-selected="false">Before</button><button role="tab" data-s="after" aria-selected="true">After</button></div>
+          <div class="vis-body"></div><div class="metric"></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Work with me</p><h2>Ways to get your data labeled</h2></div>
+      <p>Start small and judge the quality yourself, then scale up. I work to your guideline, in your tool, and deliver in the format your pipeline expects.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-card feat">
+        <span class="tag">Start here</span>
+        <h3>Pilot batch</h3>
+        <p class="for">For teams checking quality before committing.</p>
+        <ul><li>A small sample of your data labeled to your guideline</li><li>Edge-case log with every judgment call</li><li>Notes on unclear rules in the guideline</li></ul>
+      </div>
+      <div class="svc-card">
+        <span class="tag">Ongoing</span>
+        <h3>Labeling projects</h3>
+        <p class="for">For steady batches of image, video or text data.</p>
+        <ul><li>Boxes, tracking, polygons, keypoints, NER, classification</li><li>Self-QA pass on every batch</li><li>Regular progress updates</li></ul>
+      </div>
+      <div class="svc-card">
+        <span class="tag">Review</span>
+        <h3>QA and LLM evaluation</h3>
+        <p class="for">For teams that need a second pass or model ratings.</p>
+        <ul><li>Review of existing labels with corrections</li><li>Pairwise preference and rubric scoring</li><li>Written rationales for every rating</li></ul>
+      </div>
+    </div>
+    <div class="every">
+      <p class="eyebrow">Every batch includes</p>
+      <div class="tools"><span>Labels in your format</span><span>Edge-case log</span><span>Self-QA pass</span><span>Guideline questions flagged early</span><span>Central Time availability</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="background:var(--panel);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Skills</p><h2>Annotation types I handle</h2></div>
+      <p>Image, video, text and model-evaluation work, delivered in the export formats teams already train on.</p>
+    </div>
+    <div class="skills">
+      <div class="skill"><h3>Boxes and video tracking</h3><p>Tight 2D boxes and frame-by-frame tracks with persistent IDs, occlusion and truncation.</p><span class="fmt">COCO · YOLO · MOT</span></div>
+      <div class="skill"><h3>Polygon segmentation</h3><p>Semantic and instance masks that follow true edges, not shadows or reflections.</p><span class="fmt">COCO polygons · RLE masks</span></div>
+      <div class="skill"><h3>Keypoints and pose</h3><p>COCO-17 body keypoints across video frames, with per-point visibility and side conventions.</p><span class="fmt">COCO keypoints</span></div>
+      <div class="skill"><h3>Named entities</h3><p>Character-accurate spans for people, organizations, places, dates and money.</p><span class="fmt">JSONL · spaCy · CoNLL</span></div>
+      <div class="skill"><h3>Text classification</h3><p>Intent, sentiment and topic labels, including sarcasm and mixed-intent cases.</p><span class="fmt">CSV · JSONL</span></div>
+      <div class="skill"><h3>LLM evaluation</h3><p>Pairwise preference, rubric scoring and written rationales for RLHF data.</p><span class="fmt">Preference pairs · rubric scores</span></div>
+    </div>
+    <div style="margin-top:28px;display:grid;gap:12px">
+      <p class="eyebrow">Tools and formats</p>
+      <div class="tools"><span>Label Studio</span><span>CVAT</span><span>Labelbox</span><span>Roboflow</span><span>COCO JSON</span><span>YOLO txt</span><span>MOT</span><span>JSONL</span><span>Google Sheets QA trackers</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Process</p><h2>How I keep labels consistent</h2></div>
+      <p>Speed matters, but a dataset is only as good as its least consistent label. This is the routine I follow on every batch.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Read the guideline</h3><p>Note every class definition, size threshold and attribute rule before the first label.</p></li>
+      <li><h3>Calibrate</h3><p>Label a small gold set and compare against reviewer answers before the full batch.</p></li>
+      <li><h3>Label</h3><p>Work with hotkeys and a fixed class order so every frame gets the same pass.</p></li>
+      <li><h3>Self-QA</h3><p>Scrub each clip with classes toggled one at a time to catch misses, ID swaps and loose boxes.</p></li>
+      <li><h3>Log edge cases</h3><p>Write down every judgment call so the team can update the guideline.</p></li>
+    </ol>
+
+    <div style="margin-top:40px">
+      <p class="eyebrow" style="margin-bottom:12px">Edge-case log from the samples above</p>
+      <div class="tbl-wrap log"><table>
+        <thead><tr><th>Sample</th><th>Situation</th><th>Decision</th><th>Basis</th></tr></thead>
+        <tbody>
+          <tr><td>street_cam04</td><td>Truck drives in front of a standing pedestrian</td><td>Full box kept; occlusion set per frame (partial → heavy → none); ID unchanged</td><td>Occlusion attribute, track continuity</td></tr>
+          <tr><td>street_cam04</td><td>Vehicle entering or leaving the frame edge</td><td>Labeled and truncated while 10 px or more is visible; track ends after that</td><td>Truncation and min-size rule</td></tr>
+          <tr><td>street_cam04</td><td>Traffic light changes phase</td><td>State attribute updated on the first frame of the new color</td><td>Light state attribute</td></tr>
+          <tr><td>tile_33_18</td><td>Building and cloud shadows on the ground</td><td>Left unlabeled</td><td>Roof edge, not shadow</td></tr>
+          <tr><td>jumping_jacks</td><td>Left ear hidden under hair on every frame</td><td>Placed by inference, v = 1 throughout</td><td>COCO visibility flags</td></tr>
+          <tr><td>ner_07</td><td>Title before a name ("Dr.")</td><td>Included in PERSON span</td><td>Guideline 2.1</td></tr>
+          <tr><td>support_12</td><td>Sarcastic praise about a bug</td><td>Negative sentiment, bug_report intent</td><td>Label meaning, not surface words</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="color:inherit;opacity:.65">Contact</p>
+      <h2 style="margin-top:8px">Have a labeling project?</h2>
+      <p>Send a sample of your data and your guideline, and I'll label a pilot batch so you can judge the quality before you commit. Available for image, video, text and LLM evaluation work, remote or on site in Dallas–Fort Worth. Resume and references on request.</p>
+    </div>
+    <div class="cards">
+      <div class="cline"><span class="k">Email</span><a class="v" href="mailto:saivanka1999@gmail.com" id="c-email">saivanka1999@gmail.com</a><button class="copy" data-copy="c-email">Copy</button></div>
+        <div class="cline"><span class="k">Location</span><span class="v">Dallas, TX</span><span></span></div>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap"><span>© 2026 Sai Pavan Vanka</span><span>All samples are annotated demonstration data</span></div></footer>
+
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const NS='http://www.w3.org/2000/svg';
+const mod=(a,n)=>((a%n)+n)%n;
+const R=Math.round;
+const pad=(n,l=4)=>String(n).padStart(l,'0');
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const REDUCE=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const el=(tag,attrs,parent)=>{const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);parent&&parent.appendChild(e);return e};
+const set=(e,attrs)=>{for(const k in attrs)e.setAttribute(k,attrs[k])};
+
+/* shared clip player: plays while on screen, starts paused for reduced motion */
+function makePlayer(stage,btn,tick,t0){
+  let playing=!REDUCE,vis=false,t=t0||0,last=null,dirty=true;
+  const sync=()=>{btn.textContent=playing?'Pause':'Play';btn.setAttribute('aria-pressed',playing)};
+  btn.addEventListener('click',()=>{playing=!playing;sync();dirty=true});
+  try{new IntersectionObserver(es=>{vis=es[0].isIntersecting},{rootMargin:'80px'}).observe(stage)}catch(_){vis=true}
+  function loop(ts){
+    if(last!=null&&playing&&vis){t+=Math.min(.1,(ts-last)/1000);dirty=true}
+    last=ts;
+    if(dirty){dirty=false;tick(t,playing)}
+    requestAnimationFrame(loop);
+  }
+  sync();tick(t,playing);requestAnimationFrame(loop);
+  return{redraw(){dirty=true},get t(){return t},get playing(){return playing}};
+}
+function chips(box,classes,counts,on,redraw){
+  box.innerHTML=classes.map(([k,v])=>`<button class="chip" aria-pressed="true" data-k="${k}" style="color:var(${v})"><span class="sw"></span><span style="color:var(--ink)">${k}</span><span class="n">${counts[k]}</span></button>`).join('');
+  box.addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;const k=b.dataset.k;on.has(k)?on.delete(k):on.add(k);b.setAttribute('aria-pressed',on.has(k));redraw()});
+}
+
+/* hero crosshair */
+const hero=$('#hero'),cv=$('#cv'),ch=$('#ch'),cr=$('#cr');
+hero.addEventListener('pointermove',e=>{
+  if(e.pointerType!=='mouse')return;
+  const r=hero.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
+  cv.style.left=x+'px';ch.style.top=y+'px';cr.style.left=x+'px';cr.style.top=y+'px';
+  cr.textContent='x '+pad(R(x))+' · y '+pad(R(y));
+});
+
+/* copy */
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-copy]');if(!b)return;
+  const node=document.getElementById(b.dataset.copy);const t=node.textContent;
+  const done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1400)};
+  const sel=()=>{const r=document.createRange();r.selectNodeContents(node);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected';setTimeout(()=>b.textContent='Copy',1400)};
+  try{navigator.clipboard.writeText(t).then(done,sel)}catch(_){sel()}
+});
+const compact=obj=>JSON.stringify(obj,null,2).replace(/\[\s+([\d.,\s-]+?)\s+\]/g,(m,a)=>'['+a.replace(/\s+/g,' ').trim()+']');
+
+/* ================= 1. video tracking ================= */
+const CLS={car:'--c-car',truck:'--c-truck',pedestrian:'--c-ped',cyclist:'--c-bike',traffic_light:'--c-light'};
+const CAT_ID={car:1,truck:2,pedestrian:3,cyclist:4,traffic_light:5};
+/* draw order back→front; dx(t) moves each object horizontally */
+const OBJ=[
+ {id:4,cls:'pedestrian',b:[288,185,26,80],dx:t=>mod(t*16+330,760)-330,
+  svg:`<circle cx="300" cy="196" r="9" fill="#6b4a3a"/><rect x="291" y="206" width="18" height="31" rx="4" fill="#2f8f6b"/>
+  <line id="p4a" x1="296" y1="236" x2="292" y2="262" stroke="#2b2f3a" stroke-width="5" stroke-linecap="round"/><line id="p4b" x1="304" y1="236" x2="310" y2="262" stroke="#2b2f3a" stroke-width="5" stroke-linecap="round"/>
+  <line id="p4c" x1="293" y1="210" x2="290" y2="232" stroke="#2f8f6b" stroke-width="4" stroke-linecap="round"/>`},
+ {id:5,cls:'pedestrian',b:[430,238,22,54],dx:()=>0,
+  svg:`<circle cx="441" cy="247" r="8" fill="#4a3428"/><rect x="433" y="255" width="16" height="27" rx="4" fill="#3d6fb6"/>
+  <line x1="437" y1="281" x2="436" y2="291" stroke="#2b2f3a" stroke-width="5" stroke-linecap="round"/><line x1="445" y1="281" x2="446" y2="291" stroke="#2b2f3a" stroke-width="5" stroke-linecap="round"/>`},
+ {id:3,cls:'truck',b:[571,232,196,96],dx:t=>120-mod(t*24+140,1000),
+  svg:`<rect x="640" y="234" width="127" height="80" fill="#dcdde2"/><rect x="640" y="268" width="127" height="6" fill="#2f7bff" opacity=".55"/>
+  <rect x="575" y="250" width="66" height="64" rx="4" fill="#eceef1"/><rect x="575" y="240" width="40" height="12" fill="#c9ccd2"/><rect x="581" y="258" width="26" height="20" fill="#9fb8c8"/>
+  <circle cx="605" cy="316" r="13" fill="#1d1f24"/><circle cx="700" cy="316" r="13" fill="#1d1f24"/><circle cx="742" cy="316" r="13" fill="#1d1f24"/>`},
+ {id:2,cls:'car',b:[383,264,109,58],dx:t=>300-mod(t*40+300,900),
+  svg:`<rect x="385" y="282" width="105" height="27" rx="5" fill="#e2bd3f"/><polygon points="402,282 416,266 458,266 474,282" fill="#e2bd3f"/>
+  <polygon points="408,281 418,270 436,270 436,281" fill="#cfe3ee"/><polygon points="440,270 456,270 466,281 440,281" fill="#cfe3ee"/>
+  <circle cx="408" cy="310" r="10" fill="#1d1f24"/><circle cx="468" cy="310" r="10" fill="#1d1f24"/>`},
+ {id:1,cls:'car',b:[57,273,176,86],dx:t=>mod(t*55+300,900)-300,
+  svg:`<rect x="60" y="300" width="170" height="42" rx="9" fill="#b8433a"/><polygon points="94,300 120,276 186,276 207,300" fill="#b8433a"/>
+  <polygon points="104,298 124,281 150,281 150,298" fill="#cfe3ee"/><polygon points="156,281 183,281 198,298 156,298" fill="#cfe3ee"/>
+  <circle cx="100" cy="342" r="16" fill="#1d1f24"/><circle cx="100" cy="342" r="6" fill="#8a8f98"/><circle cx="195" cy="342" r="16" fill="#1d1f24"/><circle cx="195" cy="342" r="6" fill="#8a8f98"/>`},
+ {id:6,cls:'cyclist',b:[282,297,90,84],dx:t=>mod(t*80+400,1000)-400,
+  svg:`<g stroke="#1d1f24" stroke-width="3" fill="none" stroke-linecap="round"><circle cx="300" cy="364" r="16"/><circle cx="352" cy="364" r="16"/>
+  <path d="M300 364 L320 341 L352 364 M320 341 L346 341 M314 336 L326 336 M346 341 L344 330 L352 330"/></g>
+  <polyline id="c6leg" points="320,336 330,350 330,370" fill="none" stroke="#2b2f3a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="320" y1="336" x2="331" y2="313" stroke="#c0492f" stroke-width="8" stroke-linecap="round"/>
+  <line x1="331" y1="316" x2="347" y2="331" stroke="#c0492f" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="334" cy="305" r="7" fill="#6b4a3a"/>`},
+ {id:7,cls:'traffic_light',b:[242,106,26,50],dx:()=>0,
+  svg:`<rect x="244" y="108" width="22" height="46" rx="4" fill="#22262d"/><circle id="lr" cx="255" cy="119" r="5"/><circle id="ly" cx="255" cy="131" r="5"/><circle id="lg" cx="255" cy="143" r="5"/>`}
+];
+const DRAW_ORDER=OBJ.map(o=>o.id);
+const streetBg=`
+<rect width="640" height="232" fill="#b7cde0"/>
+<g id="clouds"><ellipse cx="120" cy="30" rx="46" ry="11" fill="#e8f0f6"/><ellipse cx="150" cy="24" rx="30" ry="10" fill="#e8f0f6"/><ellipse cx="460" cy="20" rx="40" ry="9" fill="#e8f0f6"/></g>
+<rect x="0" y="58" width="118" height="174" fill="#8792a5"/><rect x="118" y="28" width="104" height="204" fill="#6d788c"/>
+<rect x="428" y="48" width="112" height="184" fill="#97a1b2"/><rect x="540" y="82" width="100" height="150" fill="#7a8597"/>
+${(()=>{let w='';[[0,58,118],[118,28,104],[428,48,112],[540,82,100]].forEach(([x,y,wd])=>{for(let r=y+14;r<220;r+=24)for(let c=x+12;c<x+wd-14;c+=22)w+=`<rect x="${c}" y="${r}" width="12" height="14" fill="#d5dee8" opacity=".55"/>`});return w})()}
+<rect x="0" y="232" width="640" height="30" fill="#c9c3b8"/><rect x="0" y="260" width="640" height="3" fill="#8f8a80"/>
+<rect x="0" y="263" width="640" height="137" fill="#474c55"/>
+<g id="lanes">${[...Array(9)].map((_,i)=>`<rect x="${i*90+10}" y="326" width="44" height="5" fill="#e9e4d4"/>`).join('')}</g>
+<rect x="252" y="150" width="6" height="110" fill="#3a3f48"/>`;
+const bbSvg=$('#bb-svg');
+bbSvg.innerHTML='<g>'+streetBg+'</g>'+OBJ.map(o=>`<g id="g${o.id}">${o.svg}</g>`).join('')+'<g id="bb-ov"></g>';
+/* persistent overlay elements per track */
+const ov=$('#bb-ov');const OV={};
+OBJ.forEach(o=>{
+  const g=el('g',{'data-id':o.id,style:'cursor:pointer'},ov);
+  const r=el('rect',{'stroke-width':2,'fill-opacity':.07},g);
+  const hs=[0,1,2,3].map(()=>el('rect',{width:6,height:6,fill:'#fff','stroke-width':1.5},g));
+  const tg=el('rect',{height:14},g);
+  const tx=el('text',{'font-family':'IBM Plex Mono,monospace','font-size':10,fill:'#fff'},g);
+  tx.textContent=`${o.cls} #${o.id}`;
+  g.addEventListener('mouseenter',()=>{bbHot=o.id;bbP.redraw()});g.addEventListener('mouseleave',()=>{bbHot=null;bbP.redraw()});
+  OV[o.id]={g,r,hs,tg,tx};
+});
+const lightState=t=>{const u=mod(t,9);return u<4?'red':u<8?'green':'yellow'};
+function framesAt(t){
+  const out={};
+  OBJ.forEach(o=>{const[x,y,w,h]=o.b;const X=x+o.dx(t);const x0=Math.max(0,X),x1=Math.min(640,X+w);
+    out[o.id]={o,vis:x1-x0>=10,trunc:X<0||X+w>640,box:[R(x0),y,R(x1)-R(x0),h],dx:o.dx(t)}});
+  /* occlusion from objects drawn in front */
+  DRAW_ORDER.forEach((id,i)=>{const a=out[id];a.occ='none';if(!a.vis)return;const[ax,ay,aw,ah]=a.box;let best=0;
+    DRAW_ORDER.slice(i+1).forEach(j=>{const b=out[j];if(!b.vis||b.o.cls==='traffic_light')return;const[bx,by,bw,bh]=b.box;
+      const iw=Math.max(0,Math.min(ax+aw,bx+bw)-Math.max(ax,bx)),ih=Math.max(0,Math.min(ay+ah,by+bh)-Math.max(ay,by));best=Math.max(best,iw*ih/(aw*ah))});
+    a.occ=best<.08?'none':best<.5?'partial':'heavy'});
+  out[7].state=lightState(t);
+  return out;
+}
+const attrText=f=>{if(!f.vis)return'out of frame';if(f.o.cls==='traffic_light')return'state: '+f.state;const a=[];if(f.occ!=='none')a.push('occl: '+f.occ);if(f.trunc)a.push('truncated');return a.join(' · ')||'—'};
+const bbOn=new Set(Object.keys(CLS));let bbHot=null,bbFrameCount=0,bbLast=null;
+$('#bb-table tbody').innerHTML=OBJ.slice().sort((a,b)=>a.id-b.id).map(o=>`<tr data-id="${o.id}" data-cls="${o.cls}"><td class="mono">${o.id}</td><td><span class="dot" style="background:var(${CLS[o.cls]})"></span>${o.cls}</td><td class="mono bx"></td><td class="at"></td></tr>`).join('');
+const bbRows=[...document.querySelectorAll('#bb-table tbody tr')];
+bbRows.forEach(tr=>{tr.addEventListener('mouseenter',()=>{bbHot=+tr.dataset.id;bbP.redraw()});tr.addEventListener('mouseleave',()=>{bbHot=null;bbP.redraw()})});
+const LIGHT={red:['#ff4a3a','#4a3f20','#22382a'],yellow:['#4a2420','#ffc531','#22382a'],green:['#4a2420','#4a3f20','#3ddc6a']};
+function tickStreet(t,playing){
+  const F=framesAt(t);bbLast={t,F};const tags=$('#bb-tags').checked;
+  OBJ.forEach(o=>$('#g'+o.id).setAttribute('transform',`translate(${F[o.id].dx.toFixed(1)},0)`));
+  /* walking + pedaling + light */
+  const s=Math.sin(t*7);
+  set($('#p4a'),{x2:296+s*7});set($('#p4b'),{x2:304-s*7});set($('#p4c'),{x2:293-s*4});
+  const th=t*9,px=326+9*Math.cos(th),py=364+9*Math.sin(th);
+  set($('#c6leg'),{points:`320,336 ${((320+px)/2+7).toFixed(1)},${((336+py)/2-3).toFixed(1)} ${px.toFixed(1)},${py.toFixed(1)}`});
+  const L=LIGHT[F[7].state];set($('#lr'),{fill:L[0]});set($('#ly'),{fill:L[1]});set($('#lg'),{fill:L[2]});
+  $('#clouds').setAttribute('transform',`translate(${(mod(t*6,760)-120).toFixed(1)},0)`);
+  OBJ.forEach(o=>{
+    const f=F[o.id],v=OV[o.id],show=f.vis&&bbOn.has(o.cls);
+    v.g.setAttribute('visibility',show?'visible':'hidden');if(!show)return;
+    const c=css(CLS[o.cls]),[x,y,w,h]=f.box,hot=bbHot===o.id;
+    set(v.r,{x,y,width:w,height:h,fill:c,stroke:c,'stroke-width':hot?3.5:2,'fill-opacity':hot?.22:.07,'stroke-dasharray':f.occ==='heavy'?'6 4':'none'});
+    [[x,y],[x+w,y],[x,y+h],[x+w,y+h]].forEach(([a,b],i)=>set(v.hs[i],{x:a-3,y:b-3,stroke:c}));
+    const tw=(o.cls.length+3)*6.4+8,tx=Math.min(Math.max(0,x),640-tw);
+    set(v.tg,{x:tx,y:y-15,width:tw,fill:c,visibility:tags?'visible':'hidden'});set(v.tx,{x:tx+4,y:y-4.5,visibility:tags?'visible':'hidden'});
+  });
+  const frame=Math.floor(t*30);
+  const hot=bbHot&&F[bbHot];
+  $('#bb-readout').textContent=hot?`frame ${pad(frame)} · #${bbHot} ${hot.o.cls} [${hot.vis?hot.box.join(', '):'—'}]`:`frame ${pad(frame)} · ${(t%60).toFixed(2).padStart(5,'0')}s · ${OBJ.filter(o=>F[o.id].vis).length} tracks`;
+  if(!playing||(bbFrameCount++%5===0)){
+    bbRows.forEach(tr=>{const f=F[+tr.dataset.id];tr.hidden=!bbOn.has(tr.dataset.cls);tr.classList.toggle('hot',+tr.dataset.id===bbHot);tr.classList.toggle('gone',!f.vis);
+      tr.querySelector('.bx').textContent=f.vis?f.box.join(', '):'—';tr.querySelector('.at').textContent=attrText(f)});
+  }
+  if($('#bb-exp').open&&curFmt==='yolo'&&(!playing||frame%15===0))writeBbExport();
+}
+const bbCounts={};OBJ.forEach(o=>bbCounts[o.cls]=(bbCounts[o.cls]||0)+1);
+const bbP=makePlayer($('#bb-stage'),$('#bb-play'),tickStreet,0);
+chips($('#bb-chips'),Object.entries(CLS),bbCounts,bbOn,()=>bbP.redraw());
+$('#bb-tags').addEventListener('change',()=>bbP.redraw());
+/* exports */
+let curFmt='mot';
+const mot=(()=>{const L=['# frame,id,x,y,w,h,conf,class,visibility  (frames 0–300, every 15th shown)'];
+  for(let fr=0;fr<=300;fr+=15){const F=framesAt(fr/30);Object.values(F).filter(f=>f.vis).sort((a,b)=>a.o.id-b.o.id).forEach(f=>{
+    const vis=f.occ==='heavy'?0.3:f.occ==='partial'?0.7:1;L.push([fr,f.o.id,...f.box,1,CAT_ID[f.o.cls],vis].join(','))})}return L.join('\n')})();
+function writeBbExport(){
+  if(curFmt==='mot'){$('#bb-out').textContent=mot;$('#bb-exp-note').textContent='same IDs across all frames';return}
+  const F=bbLast.F,fr=Math.floor(bbLast.t*30);
+  $('#bb-out').textContent=`# street_cam04_${pad(fr,6)}.txt  class_id cx cy w h (normalized)\n# classes: ${Object.keys(CAT_ID).join(', ')}\n`+
+    Object.values(F).filter(f=>f.vis).map(f=>{const[x,y,w,h]=f.box;return[CAT_ID[f.o.cls]-1,((x+w/2)/640).toFixed(6),((y+h/2)/400).toFixed(6),(w/640).toFixed(6),(h/400).toFixed(6)].join(' ')}).join('\n');
+  $('#bb-exp-note').textContent=`frame ${pad(fr)}`+(bbP.playing?' · updates while playing':'');
+}
+document.querySelectorAll('#bb-exp .tabs button').forEach(b=>b.addEventListener('click',()=>{curFmt=b.dataset.fmt;document.querySelectorAll('#bb-exp .tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));writeBbExport()}));
+$('#bb-exp').addEventListener('toggle',writeBbExport);writeBbExport();
+
+/* ================= 2. segmentation replay ================= */
+const SEG={water:'--c-truck',road:'--c-light',building:'--c-car',vegetation:'--c-ped'};
+const SEG_ID={water:1,road:2,building:3,vegetation:4};
+const P=s=>s.split(' ').map(p=>p.split(',').map(Number));
+const polys=[
+ {cls:'water',pts:P('0,300 80,282 160,298 240,328 320,320 400,290 480,298 560,338 640,328 640,400 0,400')},
+ {cls:'road',pts:P('0,180 640,150 640,182 0,212')},
+ {cls:'building',pts:P('60,50 150,50 150,120 60,120')},
+ {cls:'building',pts:P('190,40 260,40 260,130 190,130')},
+ {cls:'building',pts:P('300,70 408,60 414,120 306,130')},
+ {cls:'building',pts:P('470,40 550,40 550,115 470,115')},
+ {cls:'building',pts:P('320,222 400,222 400,270 320,270')},
+ {cls:'vegetation',pts:P('512,206 612,200 624,266 520,276')},
+ {cls:'vegetation',pts:P('86,226 168,222 172,272 90,278')}
+];
+const STEP=.28,CLOSE=.4;let acc=.5;polys.forEach(p=>{p.s=acc;acc+=p.pts.length*STEP+CLOSE});
+const SEG_DONE=acc,SEG_PERIOD=acc+4;
+const trees=[[530,222,14],[556,214,15],[586,220,13],[604,240,14],[540,252,15],[570,246,16],[598,262,10],[104,240,14],[132,236,15],[156,246,12],[112,264,11],[146,264,12]];
+const aerial=`<defs><clipPath id="waterclip"><polygon points="${polys[0].pts.join(' ')}"/></clipPath></defs>
+<rect width="640" height="400" fill="#6f8f4e"/>
+<rect x="0" y="0" width="300" height="160" fill="#7a9a56"/><rect x="420" y="190" width="220" height="110" fill="#67864a"/>
+${polys.filter(p=>p.cls==='building').map(p=>`<polygon points="${p.pts.map(([x,y])=>(x+10)+','+(y+9)).join(' ')}" fill="#3e5230" opacity=".55"/>`).join('')}
+<polygon points="${polys[0].pts.join(' ')}" fill="#3f7ea6"/>
+<g clip-path="url(#waterclip)"><g id="ripples">${[...Array(36)].map((_,i)=>{const x=(i*97)%1280-640,y=296+((i*37)%100);return `<path d="M${x} ${y} q8 -4 16 0 t16 0" stroke="#cfe6f5" stroke-width="1.5" fill="none" opacity=".35"/>`}).join('')}</g></g>
+<polygon points="${polys[1].pts.join(' ')}" fill="#9a978f"/>
+<line x1="0" y1="196" x2="640" y2="166" stroke="#e9e4d4" stroke-width="2" stroke-dasharray="14 12"/>
+<g id="cars"><rect id="sc1" x="0" y="0" width="14" height="7" rx="2" fill="#d9d4c8"/><rect id="sc2" x="0" y="0" width="14" height="7" rx="2" fill="#b8433a"/></g>
+${polys.filter(p=>p.cls==='building').map((p,i)=>`<polygon points="${p.pts.join(' ')}" fill="${['#c7b8a3','#a8a29a','#b9a48c','#cfc6b8','#ab9f90'][i%5]}"/>`).join('')}
+${trees.map(([x,y,r])=>`<circle cx="${x}" cy="${y}" r="${r}" fill="#3d6a2c"/><circle cx="${x-3}" cy="${y-3}" r="${(r*.55).toFixed(1)}" fill="#4f8038"/>`).join('')}
+<g id="cshadow" opacity=".2"><ellipse cx="0" cy="120" rx="95" ry="48" fill="#0d1a0d"/><ellipse cx="60" cy="140" rx="60" ry="34" fill="#0d1a0d"/><ellipse cx="-380" cy="300" rx="80" ry="36" fill="#0d1a0d"/></g>`;
+const segSvg=$('#seg-svg');segSvg.innerHTML='<g>'+aerial+'</g><g id="seg-ov"></g>';
+const segOn=new Set(Object.keys(SEG));let segKey='';
+const area=pts=>Math.abs(pts.reduce((s,[x,y],i)=>{const[a,b]=pts[(i+1)%pts.length];return s+x*b-a*y},0)/2);
+const roadY=x=>196-30*x/640;
+function tickSeg(t){
+  const u=mod(t,SEG_PERIOD),op=$('#seg-op').value/100,showPts=$('#seg-pts').checked;
+  $('#seg-op-v').textContent=Math.round(op*100)+'%';
+  $('#ripples').setAttribute('transform',`translate(${mod(t*14,640).toFixed(1)},0)`);
+  $('#cshadow').setAttribute('transform',`translate(${(mod(t*22,1300)-200).toFixed(1)},0)`);
+  const x1=mod(t*70,700)-30,x2=640-mod(t*55+200,700)+30;
+  set($('#sc1'),{x:x1.toFixed(1),y:(roadY(x1)+4).toFixed(1)});set($('#sc2'),{x:x2.toFixed(1),y:(roadY(x2)-11).toFixed(1)});
+  const states=polys.map(p=>{if(u<p.s)return 0;const n=p.pts.length;const k=Math.min(n,Math.floor((u-p.s)/STEP)+1);return u>=p.s+n*STEP?-1:k});
+  const key=states.join()+op+showPts+[...segOn].join();
+  if(key!==segKey){segKey=key;let h='',status='';
+    polys.forEach((p,i)=>{const st=states[i];if(!st||!segOn.has(p.cls))return;const c=css(SEG[p.cls]);
+      if(st===-1){h+=`<polygon points="${p.pts.join(' ')}" fill="${c}" fill-opacity="${op}" stroke="${c}" stroke-width="2" stroke-linejoin="round"/>`;
+        if(showPts)h+=p.pts.map(([x,y])=>`<circle cx="${x}" cy="${y}" r="3.5" fill="#fff" stroke="${c}" stroke-width="1.5"/>`).join('')}
+      else{const pts=p.pts.slice(0,st),[lx,ly]=pts[pts.length-1];
+        h+=`<polyline points="${pts.join(' ')}" fill="none" stroke="${c}" stroke-width="2.5" stroke-linejoin="round"/>`+
+        `<line x1="${lx}" y1="${ly}" x2="${p.pts[0][0]}" y2="${p.pts[0][1]}" stroke="${c}" stroke-width="1.5" stroke-dasharray="4 4" opacity=".7"/>`+
+        pts.map(([x,y])=>`<circle cx="${x}" cy="${y}" r="3.5" fill="#fff" stroke="${c}" stroke-width="1.5"/>`).join('')+
+        `<g stroke="#fff" stroke-width="1.5"><line x1="${lx-12}" y1="${ly}" x2="${lx-5}" y2="${ly}"/><line x1="${lx+5}" y1="${ly}" x2="${lx+12}" y2="${ly}"/><line x1="${lx}" y1="${ly-12}" x2="${lx}" y2="${ly-5}"/><line x1="${lx}" y1="${ly+5}" x2="${lx}" y2="${ly+12}"/></g>`;
+        status=`labeling ${p.cls} · vertex ${st}/${p.pts.length} · (${lx}, ${ly})`}});
+    $('#seg-ov').innerHTML=h;
+    const done=states.filter(s=>s===-1).length;
+    $('#seg-status').textContent=status||(done===polys.length?`all ${polys.length} polygons closed · QA pass`:'starting labeling pass');
+  }
+}
+const segCounts={};polys.forEach(p=>segCounts[p.cls]=(segCounts[p.cls]||0)+1);
+const segP=makePlayer($('#seg-stage'),$('#seg-play'),tickSeg,REDUCE?SEG_DONE+.1:0);
+chips($('#seg-chips'),Object.entries(SEG),segCounts,segOn,()=>{segKey='';segP.redraw()});
+$('#seg-op').addEventListener('input',()=>{segKey='';segP.redraw()});$('#seg-pts').addEventListener('change',()=>{segKey='';segP.redraw()});
+$('#seg-table tbody').innerHTML=Object.keys(SEG).map(k=>{const ps=polys.filter(p=>p.cls===k);return `<tr><td><span class="dot" style="background:var(${SEG[k]})"></span>${k}</td><td class="mono">${ps.length}</td><td class="mono">${ps.reduce((s,p)=>s+p.pts.length,0)}</td><td class="mono">${Math.round(ps.reduce((s,p)=>s+area(p.pts),0)).toLocaleString()}</td></tr>`}).join('');
+$('#seg-out').textContent=compact({images:[{id:3318,file_name:'tile_33_18.png',width:640,height:400}],categories:Object.keys(SEG_ID).map(k=>({id:SEG_ID[k],name:k})),
+  annotations:polys.map((p,i)=>{const xs=p.pts.map(q=>q[0]),ys=p.pts.map(q=>q[1]);const x=Math.min(...xs),y=Math.min(...ys);
+  return{id:i+1,image_id:3318,category_id:SEG_ID[p.cls],segmentation:[p.pts.flat()],area:Math.round(area(p.pts)),bbox:[x,y,Math.max(...xs)-x,Math.max(...ys)-y],iscrowd:0}})});
+
+/* ================= 3. pose tracking ================= */
+const NAMES=['nose','left_eye','right_eye','left_ear','right_ear','left_shoulder','right_shoulder','left_elbow','right_elbow','left_wrist','right_wrist','left_hip','right_hip','left_knee','right_knee','left_ankle','right_ankle'];
+const VIS=[2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2];
+const A=[[150,72],[158,64],[142,64],[168,70],[132,70],[182,112],[118,112],[194,162],[106,162],[200,212],[100,212],[170,212],[130,212],[176,282],[124,282],[178,352],[122,352]];
+const B=[[150,72],[158,64],[142,64],[168,70],[132,70],[182,112],[118,112],[224,80],[76,80],[214,28],[86,28],[170,212],[130,212],[200,280],[100,280],[224,350],[76,350]];
+const SK=[[16,14],[14,12],[17,15],[15,13],[12,13],[6,12],[7,13],[6,7],[6,8],[7,9],[8,10],[9,11],[2,3],[1,2],[1,3],[2,4],[3,5],[4,6],[5,7]];
+const REP=1.15;
+function poseAt(t){const s=(1-Math.cos(2*Math.PI*t/REP))/2,dy=-13*Math.abs(Math.sin(2*Math.PI*t/REP));
+  return{pts:A.map((a,i)=>[a[0]+(B[i][0]-a[0])*s,a[1]+(B[i][1]-a[1])*s+dy]),dy,s}}
+const kpSvg=$('#kp-svg');
+kpSvg.innerHTML=`<rect width="300" height="400" fill="#dde3ea"/><rect x="0" y="0" width="300" height="300" fill="#e4e8ee"/><rect y="356" width="300" height="44" fill="#c6ccd4"/>
+<rect x="18" y="40" width="70" height="110" fill="#cfd6df"/><rect x="214" y="250" width="66" height="8" fill="#b8bfca"/>
+<ellipse id="kshadow" cx="150" cy="364" rx="70" ry="8" fill="#aeb5bf"/><g id="kbody"></g><g id="kp-ov"></g>`;
+const kb=$('#kbody'),LIMB='#5f6878';
+const limbs=[[12,14,22],[14,16,18],[13,15,22],[15,17,18]].map(([a,b,w])=>({a,b,e:el('line',{stroke:LIMB,'stroke-width':w,'stroke-linecap':'round'},kb)}));
+const feet=[16,17].map(i=>({i,e:el('ellipse',{rx:11,ry:7,fill:'#2b2f3a'},kb)}));
+const torso=el('polygon',{fill:'#4f6b8f',stroke:'#4f6b8f','stroke-width':16,'stroke-linejoin':'round'},kb);
+const arms=[[6,8,15],[8,10,13],[7,9,15],[9,11,13]].map(([a,b,w])=>({a,b,e:el('line',{stroke:LIMB,'stroke-width':w,'stroke-linecap':'round'},kb)}));
+const head=el('g',{},kb);head.innerHTML=`<rect x="141" y="88" width="18" height="22" fill="#9a7d6c"/><circle cx="150" cy="72" r="23" fill="#9a7d6c"/>
+<path d="M126 70 Q128 42 152 44 Q176 46 176 74 Q172 60 160 58 Q146 52 132 62 Z" fill="#2c2420"/><path d="M166 56 Q180 66 174 88 L164 78 Z" fill="#2c2420"/>`;
+const kov=$('#kp-ov');
+const skel=SK.map(([a,b])=>({a,b,e:el('line',{'stroke-width':2},kov)}));
+const KPC=i=>i<5?'--c-light':(i%2?'--c-car':'--c-truck');
+const dots=NAMES.map((n,i)=>{const c=el('circle',{'stroke-width':2.5,style:'cursor:pointer','data-i':i},kov);
+  c.addEventListener('mouseenter',()=>{kpHot=i;kpP.redraw()});c.addEventListener('mouseleave',()=>{kpHot=-1;kpP.redraw()});return c});
+let kpHot=-1,kpCount=0,kpLast=null;
+$('#kp-table tbody').innerHTML=NAMES.map((n,i)=>`<tr><td class="mono">${i+1}</td><td><span class="dot" style="background:var(${KPC(i)})"></span>${n}</td><td class="mono kx"></td><td class="mono ky"></td><td class="mono">${VIS[i]}</td></tr>`).join('');
+const kpRows=[...document.querySelectorAll('#kp-table tbody tr')];
+kpRows.forEach((tr,i)=>{tr.addEventListener('mouseenter',()=>{kpHot=i;kpP.redraw()});tr.addEventListener('mouseleave',()=>{kpHot=-1;kpP.redraw()})});
+function tickKp(t,playing){
+  const{pts,dy}=poseAt(t);kpLast={t,pts};const P1=i=>pts[i-1];
+  limbs.concat(arms).forEach(l=>set(l.e,{x1:P1(l.a)[0],y1:P1(l.a)[1],x2:P1(l.b)[0],y2:P1(l.b)[1]}));
+  feet.forEach(f=>set(f.e,{cx:P1(f.i)[0]+(f.i===16?5:-5),cy:P1(f.i)[1]+6}));
+  set(torso,{points:[6,7,13,12].map(i=>P1(i).join(',')).join(' ')});
+  head.setAttribute('transform',`translate(0,${dy.toFixed(1)})`);
+  const air=-dy/13;set($('#kshadow'),{rx:(72-18*air).toFixed(1),opacity:(1-.5*air).toFixed(2)});
+  const showSk=$('#kp-skel').checked,sc=css('--c-ped');
+  skel.forEach(s=>set(s.e,{x1:P1(s.a)[0],y1:P1(s.a)[1],x2:P1(s.b)[0],y2:P1(s.b)[1],stroke:sc,visibility:showSk?'visible':'hidden'}));
+  dots.forEach((d,i)=>{const c=css(KPC(i));set(d,{cx:pts[i][0],cy:pts[i][1],r:i===kpHot?7:5,stroke:c,fill:VIS[i]===2?c:'#fff'})});
+  const frame=Math.floor(t*30),rep=Math.floor(t/REP);
+  $('#kp-readout').textContent=kpHot>=0?`frame ${pad(frame)} · ${kpHot+1} ${NAMES[kpHot]} (${R(pts[kpHot][0])}, ${R(pts[kpHot][1])}) v=${VIS[kpHot]}`:`frame ${pad(frame)} · rep ${rep+1} · 17/17 points`;
+  if(!playing||kpCount++%5===0)kpRows.forEach((tr,i)=>{tr.classList.toggle('hot',i===kpHot);tr.querySelector('.kx').textContent=R(pts[i][0]);tr.querySelector('.ky').textContent=R(pts[i][1])});
+  if($('#kp-exp').open&&(!playing||frame%15===0))writeKpExport();
+}
+function writeKpExport(){
+  if(!kpLast)return;const{t,pts}=kpLast,fr=Math.floor(t*30);
+  const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]),x0=R(Math.min(...xs))-24,y0=R(Math.min(...ys))-30;
+  $('#kp-out').textContent=compact({images:[{id:fr,file_name:`jumping_jacks_${pad(fr,6)}.png`,width:300,height:400}],
+    categories:[{id:1,name:'person',keypoints:NAMES,skeleton:SK}],
+    annotations:[{id:1,track_id:1,image_id:fr,category_id:1,keypoints:pts.flatMap((p,i)=>[R(p[0]),R(p[1]),VIS[i]]),num_keypoints:17,
+      bbox:[x0,y0,R(Math.max(...xs))+24-x0,R(Math.max(...ys))+14-y0],iscrowd:0}]});
+  $('#kp-exp-note').textContent=`frame ${pad(fr)}`+(kpP.playing?' · updates while playing':'');
+}
+const kpP=makePlayer($('#kp-stage'),$('#kp-play'),tickKp,REDUCE?REP/2:0);
+$('#kp-skel').addEventListener('change',()=>kpP.redraw());
+$('#kp-exp').addEventListener('toggle',writeKpExport);
+
+/* ================= 4. NER ================= */
+const NER={PERSON:'--c-per',ORG:'--c-org',LOC:'--c-loc',DATE:'--c-date',MONEY:'--c-money'};
+const sents=[
+ ['On March 4, 2025, Priya Raman signed a $2.3 million lease with Halvorsen Logistics for a warehouse in Fort Worth.',[['March 4, 2025','DATE'],['Priya Raman','PERSON'],['$2.3 million','MONEY'],['Halvorsen Logistics','ORG'],['Fort Worth','LOC']]],
+ ['Dr. Ana Ortiz will present the trial results at Northlake Medical Center in Dallas next Tuesday.',[['Dr. Ana Ortiz','PERSON'],['Northlake Medical Center','ORG'],['Dallas','LOC'],['next Tuesday','DATE']]],
+ ['Brightline Foods cut its forecast by $40 million after shipments from Monterrey slowed in the third quarter.',[['Brightline Foods','ORG'],['$40 million','MONEY'],['Monterrey','LOC'],['the third quarter','DATE']]]
+];
+const nerData=sents.map(([t,ents])=>{let from=0;const sp=ents.map(([s,l])=>{const st=t.indexOf(s,from);from=st+s.length;return{s,l,start:st,end:st+s.length}});return{t,sp}});
+$('#ner-legend').innerHTML=Object.entries(NER).map(([k,v])=>`<span><i style="background:var(${v})"></i>${k}</span>`).join('');
+$('#ner-doc').innerHTML=nerData.map(({t,sp})=>{let h='',p=0;sp.forEach(e=>{h+=esc(t.slice(p,e.start))+`<span class="ent" style="--lc:var(${NER[e.l]})">${esc(e.s)}<b>${e.l}</b></span>`;p=e.end});return `<div class="sent">${h+esc(t.slice(p))}</div>`}).join('');
+$('#ner-table tbody').innerHTML=nerData.flatMap(d=>d.sp).map(e=>`<tr><td>${esc(e.s)}</td><td><span class="dot" style="background:var(${NER[e.l]})"></span>${e.l}</td><td class="mono">${e.start}</td><td class="mono">${e.end}</td></tr>`).join('');
+$('#ner-out').textContent=nerData.map(d=>JSON.stringify({text:d.t,entities:d.sp.map(e=>[e.start,e.end,e.l])})).join('\n');
+
+/* ================= 5. classification ================= */
+const tickets=[
+ ['Great, another update that broke my login. Thanks a lot.','bug_report','negative','Sarcasm: positive words, negative meaning.'],
+ ['Can I move my plan from monthly to yearly without losing my saved projects?','billing_question','neutral',''],
+ ['The new export button saved me an hour today. Could you add PDF as an option too?','feature_request','positive','Mixed: praise plus a request. Intent follows the ask.'],
+ ['I was charged twice for October and nobody has answered my email in four days.','billing_dispute','negative','Two issues; primary intent is the double charge.'],
+ ['How do I reset my password?','account_access','neutral','']
+];
+const pc={negative:'neg',positive:'pos',neutral:'neu'};
+$('#cls-list').innerHTML=tickets.map(([t,i,s,w])=>`<div class="cls"><div><q>${esc(t)}</q>${w?`<p class="why">${w}</p>`:''}</div><div class="lbls"><span class="pill">intent: ${i}</span><span class="pill ${pc[s]}">sentiment: ${s}</span></div></div>`).join('');
+
+/* ================= 6. rubric bars ================= */
+const AX=['helpfulness','accuracy','clarity','safety'];
+document.querySelectorAll('[data-scores]').forEach(n=>{n.innerHTML=n.dataset.scores.split(',').map((v,i)=>`<div class="score"><span>${AX[i]}</span><div class="track"><span style="width:${v/7*100}%"></span></div><b>${v}/7</b></div>`).join('')});
+
+/* ================= problems & solutions ================= */
+const iou=(a,b)=>{const iw=Math.max(0,Math.min(a[0]+a[2],b[0]+b[2])-Math.max(a[0],b[0])),ih=Math.max(0,Math.min(a[1]+a[3],b[1]+b[3])-Math.max(a[1],b[1]));const i=iw*ih;return i/(a[2]*a[3]+b[2]*b[3]-i)};
+const REF=[62,64,196,106],BOX={before:[38,40,252,148],after:[64,65,193,104]};
+const IOU={before:iou(REF,BOX.before),after:iou(REF,BOX.after)};
+const ROOF=P('90,40 210,40 210,120 90,120'),SHADOW=P('210,40 236,62 236,142 116,142 90,120 210,120');
+const POLY={before:P('90,40 210,40 236,62 236,142 116,142 90,120'),after:ROOF};
+const AREA={before:area(POLY.before),after:area(POLY.after)};
+const IDS={before:[[4,4,4,4,5,5,5,5],[5,5,5,5,4,4,4,4]],after:[[4,4,4,4,4,4,4,4],[5,5,5,5,5,5,5,5]]};
+const switches=s=>IDS[s].reduce((n,row)=>n+row.slice(1).filter((v,i)=>v!==row[i]).length,0);
+const met=(label,b,a,s)=>`<span>${label}</span><span><b class="b${s==='before'?' cur':''}">${b}</b> → <b class="a${s==='after'?' cur':''}">${a}</b></span>`;
+const RENDER={
+  iou(s){const c=s==='before'?css('--bad'):css('--good'),[x,y,w,h]=BOX[s];
+    return{body:`<svg viewBox="0 0 320 200" role="img" aria-label="Car with ${s} bounding box against the reference box"><rect width="320" height="150" fill="#b7cde0"/><rect y="150" width="320" height="50" fill="#474c55"/><rect x="0" y="176" width="320" height="4" fill="#e9e4d4" opacity=".5"/>
+      <rect x="64" y="110" width="192" height="42" rx="9" fill="#b8433a"/><polygon points="100,110 128,66 210,66 236,110" fill="#b8433a"/><polygon points="110,108 132,72 166,72 166,108" fill="#cfe3ee"/><polygon points="172,72 206,72 226,108 172,108" fill="#cfe3ee"/>
+      <circle cx="108" cy="152" r="18" fill="#1d1f24"/><circle cx="212" cy="152" r="18" fill="#1d1f24"/><circle cx="108" cy="152" r="7" fill="#8a8f98"/><circle cx="212" cy="152" r="7" fill="#8a8f98"/>
+      <rect x="${REF[0]}" y="${REF[1]}" width="${REF[2]}" height="${REF[3]}" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c}" fill-opacity=".1" stroke="${c}" stroke-width="2.5"/>
+      <rect x="${x}" y="${y-14}" width="62" height="14" fill="${c}"/><text x="${x+4}" y="${y-3.5}" font-family="IBM Plex Mono,monospace" font-size="10" fill="#fff">car · ${s}</text>
+      <text x="${REF[0]+REF[2]-4}" y="${REF[1]+REF[3]-6}" text-anchor="end" font-family="IBM Plex Mono,monospace" font-size="9" fill="#fff">reference</text></svg>`,
+      metric:met('IoU vs reference',IOU.before.toFixed(2),IOU.after.toFixed(2),s)}},
+  track(s){const col=['var(--c-ped)','var(--c-car)'];const idc=id=>id===4?col[0]:col[1];
+    let h='<div class="idgrid"><span></span>'+[...Array(8)].map((_,i)=>`<span class="h">f${i+1}</span>`).join('');
+    ['person in green','person in blue'].forEach((lab,r)=>{h+=`<span class="lab">${lab}</span>`+IDS[s][r].map((id,i)=>`<span class="cell${i>0&&id!==IDS[s][r][i-1]?' swap':''}" style="background:${idc(id)}">#${id}</span>`).join('')});
+    h+=`<span class="cross-mark">paths cross between f4 and f5${s==='before'?' · IDs swap here':' · IDs hold'}</span></div>`;
+    return{body:h,metric:met('ID switches',switches('before'),switches('after'),s)}},
+  shadow(s){const c=s==='before'?css('--bad'):css('--good'),pts=POLY[s];
+    return{body:`<svg viewBox="0 0 320 180" role="img" aria-label="Building roof with ${s} segmentation polygon"><rect width="320" height="180" fill="#6f8f4e"/>
+      <polygon points="${SHADOW.join(' ')}" fill="#33452a" opacity=".75"/><polygon points="${ROOF.join(' ')}" fill="#c7b8a3"/><line x1="90" y1="80" x2="210" y2="80" stroke="#b3a48e" stroke-width="2"/>
+      <circle cx="278" cy="24" r="10" fill="#f0c94a" opacity=".85"/><text x="270" y="50" font-family="IBM Plex Mono,monospace" font-size="9" fill="#fff">sun</text>
+      <polygon points="${pts.join(' ')}" fill="${c}" fill-opacity=".3" stroke="${c}" stroke-width="2.5" stroke-linejoin="round"/>
+      ${pts.map(([x,y])=>`<circle cx="${x}" cy="${y}" r="3.5" fill="#fff" stroke="${c}" stroke-width="1.5"/>`).join('')}</svg>`,
+      metric:met('building mask px²',R(AREA.before).toLocaleString(),R(AREA.after).toLocaleString(),s)+`<span>shadow pixels in mask: ${s==='before'?R(AREA.before-AREA.after).toLocaleString():'0'}</span>`}},
+  text(s){const before=s==='before';
+    return{body:`<div class="tcard"><q>${before?'<span class="kw">Great</span>, another update that broke my login. <span class="kw">Thanks a lot</span>.':'Great, another update that broke my login. Thanks a lot.'}</q>
+      <div class="lbls"><span class="pill">intent: ${before?'feedback':'bug_report'}</span><span class="pill ${before?'pos':'neg'}">sentiment: ${before?'positive':'negative'}</span></div>
+      <p class="why">${before?'Labeled from the highlighted keywords. No reason recorded.':'Reason: sarcasm. The customer is reporting a broken login and is frustrated.'}</p></div>`,
+      metric:met('label matches meaning','no','yes',s)}}
+};
+document.querySelectorAll('.case').forEach(cs=>{
+  const k=cs.dataset.k,btns=cs.querySelectorAll('.ba button'),body=cs.querySelector('.vis-body'),m=cs.querySelector('.metric');
+  let st='after',held=false,vis=false;
+  const show=s=>{st=s;btns.forEach(b=>b.setAttribute('aria-selected',b.dataset.s===s));const r=RENDER[k](s);body.innerHTML=r.body;m.innerHTML=r.metric};
+  btns.forEach(b=>b.addEventListener('click',()=>{held=true;show(b.dataset.s)}));
+  cs._show=()=>show(st);
+  try{new IntersectionObserver(es=>{vis=es[0].isIntersecting}).observe(cs)}catch(_){}
+  if(!REDUCE)setInterval(()=>{if(!held&&vis&&!document.hidden)show(st==='after'?'before':'after')},2800);
+  show('after');
+});
+
+/* theme change: recolor overlays */
+const redrawAll=()=>{segKey='';bbP.redraw();segP.redraw();kpP.redraw();document.querySelectorAll('.case').forEach(c=>c._show&&c._show())};
+const mq=matchMedia('(prefers-color-scheme: dark)');
+mq.addEventListener&&mq.addEventListener('change',redrawAll);
+new MutationObserver(redrawAll).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+})();
+</script>
+
+</body></html>
